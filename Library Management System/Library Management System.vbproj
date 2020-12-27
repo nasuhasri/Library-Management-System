@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBookPage.Designer.vb">
+      <DependentUpon>AddBookPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBookPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookDetailsPage.Designer.vb">
+      <DependentUpon>BookDetailsPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookDetailsPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookIssueInfoPage.Designer.vb">
       <DependentUpon>BookIssueInfoPage.vb</DependentUpon>
     </Compile>
@@ -83,6 +95,12 @@
       <DependentUpon>BookReturnInfoPage.vb</DependentUpon>
     </Compile>
     <Compile Include="BookReturnInfoPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBooksPage.Designer.vb">
+      <DependentUpon>DeleteBooksPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBooksPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -96,6 +114,24 @@
       <DependentUpon>LateReturnInfoPage.vb</DependentUpon>
     </Compile>
     <Compile Include="LateReturnInfoPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListsBookPage.Designer.vb">
+      <DependentUpon>ListsBookPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListsBookPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.vb">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuListPage.Designer.vb">
+      <DependentUpon>MenuListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuListPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -113,6 +149,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RegistrationPage.Designer.vb">
+      <DependentUpon>RegistrationPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpPage.Designer.vb">
+      <DependentUpon>StartUpPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBooksPage.Designer.vb">
+      <DependentUpon>UpdateBooksPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBooksPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserInformationPage.Designer.vb">
       <DependentUpon>UserInformationPage.vb</DependentUpon>
     </Compile>
@@ -121,11 +175,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddBookPage.resx">
+      <DependentUpon>AddBookPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookDetailsPage.resx">
+      <DependentUpon>BookDetailsPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookIssueInfoPage.resx">
       <DependentUpon>BookIssueInfoPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookReturnInfoPage.resx">
       <DependentUpon>BookReturnInfoPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBooksPage.resx">
+      <DependentUpon>DeleteBooksPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -133,11 +196,29 @@
     <EmbeddedResource Include="LateReturnInfoPage.resx">
       <DependentUpon>LateReturnInfoPage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListsBookPage.resx">
+      <DependentUpon>ListsBookPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuListPage.resx">
+      <DependentUpon>MenuListPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationPage.resx">
+      <DependentUpon>RegistrationPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpPage.resx">
+      <DependentUpon>StartUpPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBooksPage.resx">
+      <DependentUpon>UpdateBooksPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInformationPage.resx">
       <DependentUpon>UserInformationPage.vb</DependentUpon>
