@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Library_Management_System.MenuListPage
+            Me.MainForm = Global.Library_Management_System.BorrowersInfoPage
         End Sub
     End Class
 End Namespace

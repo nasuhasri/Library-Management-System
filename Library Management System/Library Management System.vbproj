@@ -121,6 +121,11 @@
     <Compile Include="ListsBookPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lmsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lmsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.Designer.vb">
       <DependentUpon>LoginPage.vb</DependentUpon>
     </Compile>
@@ -224,6 +229,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="lmsDataSet.xsc">
+      <DependentUpon>lmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lmsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lmsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lmsDataSet.xss">
+      <DependentUpon>lmsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
