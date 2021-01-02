@@ -44,7 +44,7 @@ Partial Class MenuListPage
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 33)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(797, 399)
         Me.PictureBox1.TabIndex = 2
@@ -108,7 +108,7 @@ Partial Class MenuListPage
         'BorrowerDetailsToolStripMenuItem
         '
         Me.BorrowerDetailsToolStripMenuItem.Name = "BorrowerDetailsToolStripMenuItem"
-        Me.BorrowerDetailsToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.BorrowerDetailsToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
         Me.BorrowerDetailsToolStripMenuItem.Text = "Borrower Details"
         '
         'UserToolStripMenuItem
@@ -131,7 +131,7 @@ Partial Class MenuListPage
         Me.ClientSize = New System.Drawing.Size(795, 430)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MenuListPage"
         Me.Text = "Menu Lists Page"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

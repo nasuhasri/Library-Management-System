@@ -7,4 +7,9 @@
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub BookIssuesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookIssuesToolStripMenuItem.Click
+        Me.Hide()
+        BookIssueInfoPage.Show()
+    End Sub
 End Class

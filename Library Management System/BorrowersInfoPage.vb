@@ -49,7 +49,7 @@ Public Class BorrowersInfoPage
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
 
         'To search data
-        Me.BorrowerTableAdapter.FillBy2(Me.LmsDataSet.Borrower, txtSearch.Text)
+        Me.BorrowerTableAdapter.FillBy(Me.LmsDataSet.Borrower, txtSearch.Text)
 
         'Clear All Items in Listox
         ListBooksBorrowed.Items.Clear()

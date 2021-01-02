@@ -8,12 +8,12 @@
   <Shapes>
     <Shape ID="DesignTable:Book" ZOrder="8" X="358" Y="70" Height="227" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
     <Shape ID="DesignTable:Borrow" ZOrder="7" X="70" Y="70" Height="250" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
-    <Shape ID="DesignTable:Borrower" ZOrder="6" X="358" Y="367" Height="273" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:Late Return Fines" ZOrder="5" X="358" Y="641" Height="204" Width="290" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:User" ZOrder="4" X="718" Y="70" Height="204" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:Borrower" ZOrder="1" X="358" Y="367" Height="250" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:Late Return Fines" ZOrder="6" X="358" Y="641" Height="204" Width="290" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:User" ZOrder="5" X="718" Y="70" Height="204" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:BookBorrow" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:BookBorrow" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>358</X>
@@ -25,7 +25,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:BorrowerBorrow" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:BorrowerBorrow" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>358</X>
@@ -41,7 +41,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:BorrowLate Return Fines" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:BorrowLate Return Fines" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>263</X>
