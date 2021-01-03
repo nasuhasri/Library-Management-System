@@ -84,4 +84,40 @@ Public Class BookReturnInfoPage
         Me.Close()
         MenuListPage.Show()
     End Sub
+
+    Private Sub btnSelectItem_Click(sender As Object, e As EventArgs) Handles btnSelectItem.Click
+        Dim intI As Integer
+        Dim conn As New OleDbConnection
+        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
+        conn.Open()
+
+        Dim sqlBook As String
+
+
+        Dim intIndex As Integer
+        For intIndex = 0 To chkLBooks.CheckedItems.Count - 1
+            Dim title As String = chkLBooks.CheckedItems(intIndex)
+            sqlBook = "Select B.ISBN, B.YearPublish, B.Title, B.Author, B.PublisherName, BO.IssueDate,
+                    BO.DueDate, BO.LateRetStatus From Book B, Borrow BO, Borrower BR
+                    Where B.ISBN = BO.ISBN
+                    And BO.BorrowerID = BR.BorrowerID
+                    And BR.ICNum='" + lblIC.Text + "'
+                    And B.Title='" + title + "'"
+
+            Dim cmdBook As New OleDbCommand(sqlBook, conn)
+            Dim readerBook As OleDbDataReader
+            readerBook = cmdBook.ExecuteReader()
+
+            While readerBook.Read()
+                lblISBN.Text = readerBook("ISBN")
+                lblPubYr.Text = readerBook("YearPublish")
+                lblTitle.Text = readerBook("Title")
+                lblAuthor.Text = readerBook("Author")
+                lblPubName.Text = readerBook("PublisherName")
+                lblIssueDate.Text = readerBook("IssueDate")
+                lblDueDate.Text = readerBook("DueDate")
+                lblRetStatus.Text = readerBook("LateRetStatus")
+            End While
+        Next
+    End Sub
 End Class
