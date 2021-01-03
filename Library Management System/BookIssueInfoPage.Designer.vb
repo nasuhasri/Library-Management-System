@@ -58,11 +58,11 @@ Partial Class BookIssueInfoPage
         Me.BorrowTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         BorrowerIDLabel = New System.Windows.Forms.Label()
         BorrowerNameLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
@@ -385,28 +385,13 @@ Partial Class BookIssueInfoPage
         Me.DataGridView1.Size = New System.Drawing.Size(753, 220)
         Me.DataGridView1.TabIndex = 18
         '
-        'DataGridViewTextBoxColumn10
+        'DataGridViewTextBoxColumn6
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Address"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "HPNum"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "HP Number"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Width = 120
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ICNum"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "IC Number"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 120
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "BorrowerID"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Borrower ID"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 120
         '
         'DataGridViewTextBoxColumn7
         '
@@ -416,13 +401,28 @@ Partial Class BookIssueInfoPage
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
         Me.DataGridViewTextBoxColumn7.Width = 150
         '
-        'DataGridViewTextBoxColumn6
+        'DataGridViewTextBoxColumn8
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "BorrowerID"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Borrower ID"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 120
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ICNum"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "IC Number"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 120
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "HPNum"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "HP Number"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 120
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Address"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Address"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
         'BookIssueInfoPage
         '

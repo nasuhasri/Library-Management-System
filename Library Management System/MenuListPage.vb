@@ -12,4 +12,9 @@
         Me.Hide()
         BookIssueInfoPage.Show()
     End Sub
+
+    Private Sub BookReturnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookReturnToolStripMenuItem.Click
+        Me.Hide()
+        BookReturnInfoPage.Show()
+    End Sub
 End Class

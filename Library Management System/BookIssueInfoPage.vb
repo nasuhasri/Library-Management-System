@@ -6,6 +6,7 @@ Public Class BookIssueInfoPage
         Me.BorrowTableAdapter.Fill(Me.LmsDataSet.Borrow)
         'TODO: This line of code loads data into the 'LmsDataSet.Borrower' table. You can move, or remove it, as needed.
         Me.BorrowerTableAdapter.Fill(Me.LmsDataSet.Borrower)
+
         cmbSearch.Items.Add("ISBN")
         cmbSearch.Items.Add("Author")
         cmbSearch.Items.Add("Title")
@@ -29,10 +30,6 @@ Public Class BookIssueInfoPage
             Dim myReader As OleDbDataReader
             myReader = cmd.ExecuteReader()
             myReader.Read()
-
-            'While myReader.Read
-            '    cmbBorrowerID.Items.Add(myReader.Item("BorrowerID"))
-            'End While
         Catch ex As Exception
 
         End Try
@@ -97,10 +94,6 @@ Public Class BookIssueInfoPage
 
             Dim strsql As String
 
-            'strsql = "INSERT INTO Borrow ([IssueDate], [DueDate], [ReturnDate], [LateRetStatus], [ISBN], [BorrowerID]" _
-            '         & "VALUES('" & DTPIssueDate.Value & "','" & DTPDueDate.Value & "','" & DTPIssueDate.Value & "'," _
-            '         & "'No'," & "'" & lblISBN.Text & "','" & BorrowerIDTextBox.Text & "')"
-
             Dim issueDate, dueDate, retDate As DateTime
             issueDate = DTPIssueDate.Value.Date
             dueDate = DTPDueDate.Value.Date
@@ -118,7 +111,7 @@ Public Class BookIssueInfoPage
             'cmd.Parameters.Add("IssueDate", OleDbType.DateTime).Value = DateTimePicker1.Value
 
             cmd.ExecuteNonQuery()
-            MessageBox.Show("Saved")
+            MessageBox.Show("Data Successfully Saved!")
 
 
         Catch ex As Exception
