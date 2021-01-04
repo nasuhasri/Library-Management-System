@@ -25,10 +25,30 @@ Partial Class BookReturnInfoPage
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookReturnInfoPage))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnSelectItem = New System.Windows.Forms.Button()
         Me.lblIC = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblRetFines = New System.Windows.Forms.Label()
+        Me.lblRetStatus = New System.Windows.Forms.Label()
+        Me.lblDueDate = New System.Windows.Forms.Label()
+        Me.lblIssueDate = New System.Windows.Forms.Label()
+        Me.lblPubName = New System.Windows.Forms.Label()
+        Me.lblAuthor = New System.Windows.Forms.Label()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblPubYr = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblISBN = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.chkLBooks = New System.Windows.Forms.CheckedListBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BorrowerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -43,34 +63,16 @@ Partial Class BookReturnInfoPage
         Me.Label13 = New System.Windows.Forms.Label()
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtISBN = New System.Windows.Forms.TextBox()
-        Me.txtPubYear = New System.Windows.Forms.TextBox()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.txtPubName = New System.Windows.Forms.TextBox()
-        Me.txtIssueDate = New System.Windows.Forms.TextBox()
-        Me.txtDueDate = New System.Windows.Forms.TextBox()
-        Me.txtLateRetStatus = New System.Windows.Forms.TextBox()
-        Me.txtLateRetFines = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.BorrowerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnSelectItem)
         Me.GroupBox1.Controls.Add(Me.lblIC)
         Me.GroupBox1.Controls.Add(Me.lblName)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -79,12 +81,21 @@ Partial Class BookReturnInfoPage
         Me.GroupBox1.Controls.Add(Me.chkLBooks)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 211)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 164)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1146, 526)
+        Me.GroupBox1.Size = New System.Drawing.Size(1146, 555)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Book Return Information"
+        '
+        'btnSelectItem
+        '
+        Me.btnSelectItem.Location = New System.Drawing.Point(248, 366)
+        Me.btnSelectItem.Name = "btnSelectItem"
+        Me.btnSelectItem.Size = New System.Drawing.Size(210, 65)
+        Me.btnSelectItem.TabIndex = 18
+        Me.btnSelectItem.Text = "Select Item"
+        Me.btnSelectItem.UseVisualStyleBackColor = True
         '
         'lblIC
         '
@@ -125,6 +136,204 @@ Partial Class BookReturnInfoPage
         Me.Label1.Size = New System.Drawing.Size(161, 25)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Borrower's Name"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblRetFines)
+        Me.GroupBox2.Controls.Add(Me.lblRetStatus)
+        Me.GroupBox2.Controls.Add(Me.lblDueDate)
+        Me.GroupBox2.Controls.Add(Me.lblIssueDate)
+        Me.GroupBox2.Controls.Add(Me.lblPubName)
+        Me.GroupBox2.Controls.Add(Me.lblAuthor)
+        Me.GroupBox2.Controls.Add(Me.lblTitle)
+        Me.GroupBox2.Controls.Add(Me.Label12)
+        Me.GroupBox2.Controls.Add(Me.lblPubYr)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.lblISBN)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Location = New System.Drawing.Point(548, 41)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(565, 479)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Book Details"
+        '
+        'lblRetFines
+        '
+        Me.lblRetFines.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblRetFines.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRetFines.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRetFines.Location = New System.Drawing.Point(230, 417)
+        Me.lblRetFines.Name = "lblRetFines"
+        Me.lblRetFines.Size = New System.Drawing.Size(268, 36)
+        Me.lblRetFines.TabIndex = 26
+        '
+        'lblRetStatus
+        '
+        Me.lblRetStatus.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblRetStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRetStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRetStatus.Location = New System.Drawing.Point(230, 365)
+        Me.lblRetStatus.Name = "lblRetStatus"
+        Me.lblRetStatus.Size = New System.Drawing.Size(268, 36)
+        Me.lblRetStatus.TabIndex = 25
+        '
+        'lblDueDate
+        '
+        Me.lblDueDate.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblDueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDueDate.Location = New System.Drawing.Point(230, 317)
+        Me.lblDueDate.Name = "lblDueDate"
+        Me.lblDueDate.Size = New System.Drawing.Size(268, 36)
+        Me.lblDueDate.TabIndex = 24
+        '
+        'lblIssueDate
+        '
+        Me.lblIssueDate.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblIssueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblIssueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIssueDate.Location = New System.Drawing.Point(230, 271)
+        Me.lblIssueDate.Name = "lblIssueDate"
+        Me.lblIssueDate.Size = New System.Drawing.Size(268, 36)
+        Me.lblIssueDate.TabIndex = 23
+        '
+        'lblPubName
+        '
+        Me.lblPubName.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblPubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPubName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPubName.Location = New System.Drawing.Point(230, 224)
+        Me.lblPubName.Name = "lblPubName"
+        Me.lblPubName.Size = New System.Drawing.Size(268, 36)
+        Me.lblPubName.TabIndex = 22
+        '
+        'lblAuthor
+        '
+        Me.lblAuthor.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAuthor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAuthor.Location = New System.Drawing.Point(230, 176)
+        Me.lblAuthor.Name = "lblAuthor"
+        Me.lblAuthor.Size = New System.Drawing.Size(268, 36)
+        Me.lblAuthor.TabIndex = 21
+        '
+        'lblTitle
+        '
+        Me.lblTitle.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(230, 128)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(268, 36)
+        Me.lblTitle.TabIndex = 20
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(19, 418)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(165, 25)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Late Return Fines"
+        '
+        'lblPubYr
+        '
+        Me.lblPubYr.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblPubYr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPubYr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPubYr.Location = New System.Drawing.Point(230, 80)
+        Me.lblPubYr.Name = "lblPubYr"
+        Me.lblPubYr.Size = New System.Drawing.Size(268, 36)
+        Me.lblPubYr.TabIndex = 19
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(19, 365)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(173, 25)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Late Return Status"
+        '
+        'lblISBN
+        '
+        Me.lblISBN.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblISBN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblISBN.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblISBN.Location = New System.Drawing.Point(230, 33)
+        Me.lblISBN.Name = "lblISBN"
+        Me.lblISBN.Size = New System.Drawing.Size(268, 36)
+        Me.lblISBN.TabIndex = 18
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(19, 176)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(70, 25)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Author"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(19, 317)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(94, 25)
+        Me.Label10.TabIndex = 6
+        Me.Label10.Text = "Due Date"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 44)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(58, 25)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "ISBN"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(19, 80)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(153, 25)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Publication Year"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(19, 271)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(105, 25)
+        Me.Label9.TabIndex = 5
+        Me.Label9.Text = "Issue Date"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(19, 224)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(164, 25)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Publisher's Name"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(19, 128)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(49, 25)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "Title"
         '
         'chkLBooks
         '
@@ -246,177 +455,6 @@ Partial Class BookReturnInfoPage
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Nothing
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 25)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "ISBN"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 78)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(153, 25)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Publication Year"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 114)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 25)
-        Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Title"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 150)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 25)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Author"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 186)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(164, 25)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Publisher's Name"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 222)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 25)
-        Me.Label9.TabIndex = 5
-        Me.Label9.Text = "Issue Date"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 258)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(94, 25)
-        Me.Label10.TabIndex = 6
-        Me.Label10.Text = "Due Date"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 294)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(173, 25)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Late Return Status"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 330)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(165, 25)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Late Return Fines"
-        '
-        'txtISBN
-        '
-        Me.txtISBN.Location = New System.Drawing.Point(213, 42)
-        Me.txtISBN.Name = "txtISBN"
-        Me.txtISBN.Size = New System.Drawing.Size(286, 30)
-        Me.txtISBN.TabIndex = 9
-        '
-        'txtPubYear
-        '
-        Me.txtPubYear.Location = New System.Drawing.Point(213, 78)
-        Me.txtPubYear.Name = "txtPubYear"
-        Me.txtPubYear.Size = New System.Drawing.Size(286, 30)
-        Me.txtPubYear.TabIndex = 10
-        '
-        'txtTitle
-        '
-        Me.txtTitle.Location = New System.Drawing.Point(213, 114)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(286, 30)
-        Me.txtTitle.TabIndex = 11
-        '
-        'txtAuthor
-        '
-        Me.txtAuthor.Location = New System.Drawing.Point(213, 150)
-        Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(286, 30)
-        Me.txtAuthor.TabIndex = 12
-        '
-        'txtPubName
-        '
-        Me.txtPubName.Location = New System.Drawing.Point(213, 186)
-        Me.txtPubName.Name = "txtPubName"
-        Me.txtPubName.Size = New System.Drawing.Size(286, 30)
-        Me.txtPubName.TabIndex = 13
-        '
-        'txtIssueDate
-        '
-        Me.txtIssueDate.Location = New System.Drawing.Point(213, 222)
-        Me.txtIssueDate.Name = "txtIssueDate"
-        Me.txtIssueDate.Size = New System.Drawing.Size(286, 30)
-        Me.txtIssueDate.TabIndex = 14
-        '
-        'txtDueDate
-        '
-        Me.txtDueDate.Location = New System.Drawing.Point(213, 258)
-        Me.txtDueDate.Name = "txtDueDate"
-        Me.txtDueDate.Size = New System.Drawing.Size(286, 30)
-        Me.txtDueDate.TabIndex = 15
-        '
-        'txtLateRetStatus
-        '
-        Me.txtLateRetStatus.Location = New System.Drawing.Point(213, 294)
-        Me.txtLateRetStatus.Name = "txtLateRetStatus"
-        Me.txtLateRetStatus.Size = New System.Drawing.Size(286, 30)
-        Me.txtLateRetStatus.TabIndex = 16
-        '
-        'txtLateRetFines
-        '
-        Me.txtLateRetFines.Location = New System.Drawing.Point(213, 330)
-        Me.txtLateRetFines.Name = "txtLateRetFines"
-        Me.txtLateRetFines.Size = New System.Drawing.Size(286, 30)
-        Me.txtLateRetFines.TabIndex = 17
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.txtLateRetFines)
-        Me.GroupBox2.Controls.Add(Me.txtLateRetStatus)
-        Me.GroupBox2.Controls.Add(Me.txtDueDate)
-        Me.GroupBox2.Controls.Add(Me.txtIssueDate)
-        Me.GroupBox2.Controls.Add(Me.txtPubName)
-        Me.GroupBox2.Controls.Add(Me.txtAuthor)
-        Me.GroupBox2.Controls.Add(Me.txtTitle)
-        Me.GroupBox2.Controls.Add(Me.txtPubYear)
-        Me.GroupBox2.Controls.Add(Me.txtISBN)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Location = New System.Drawing.Point(549, 56)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(565, 404)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Book Details"
-        '
         'BookReturnInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -432,12 +470,12 @@ Partial Class BookReturnInfoPage
         Me.Text = "BookReturnInfoPage"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.BorrowerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -463,15 +501,6 @@ Partial Class BookReturnInfoPage
     Friend WithEvents lblName As Label
     Friend WithEvents lblIC As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtLateRetFines As TextBox
-    Friend WithEvents txtLateRetStatus As TextBox
-    Friend WithEvents txtDueDate As TextBox
-    Friend WithEvents txtIssueDate As TextBox
-    Friend WithEvents txtPubName As TextBox
-    Friend WithEvents txtAuthor As TextBox
-    Friend WithEvents txtTitle As TextBox
-    Friend WithEvents txtPubYear As TextBox
-    Friend WithEvents txtISBN As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -481,4 +510,14 @@ Partial Class BookReturnInfoPage
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents lblDueDate As Label
+    Friend WithEvents lblIssueDate As Label
+    Friend WithEvents lblPubName As Label
+    Friend WithEvents lblAuthor As Label
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents lblPubYr As Label
+    Friend WithEvents lblISBN As Label
+    Friend WithEvents lblRetFines As Label
+    Friend WithEvents lblRetStatus As Label
+    Friend WithEvents btnSelectItem As Button
 End Class
