@@ -107,8 +107,6 @@ Public Class BookIssueInfoPage
             cmd.Parameters.Add(New OleDbParameter("ReturnDate", CType(retDate, Date)))
             cmd.Parameters.Add(New OleDbParameter("ISBN", CType(lblISBN.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("BorrowerID", CType(BorrowerIDTextBox.Text, String)))
-            'cmd.Parameters.Add(New OleDbParameter("IssueDate", CType(DTPDueDate.Value, String)))
-            'cmd.Parameters.Add("IssueDate", OleDbType.DateTime).Value = DateTimePicker1.Value
 
             cmd.ExecuteNonQuery()
             MessageBox.Show("Data Successfully Saved!")
