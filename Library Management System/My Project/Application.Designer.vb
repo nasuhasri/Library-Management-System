@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< Updated upstream
             Me.MainForm = Global.Library_Management_System.RegistrationPage
+=======
+            Me.MainForm = Global.Library_Management_System.MenuListPage
+>>>>>>> Stashed changes
         End Sub
     End Class
 End Namespace
