@@ -23,12 +23,12 @@ Partial Class RegistrationPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrationPage))
         Dim StaffIDLabel1 As System.Windows.Forms.Label
         Dim StaffNameLabel As System.Windows.Forms.Label
         Dim HPNumLabel As System.Windows.Forms.Label
         Dim UsernameLabel As System.Windows.Forms.Label
         Dim PasswordLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrationPage))
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
@@ -60,6 +60,11 @@ Partial Class RegistrationPage
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.UserDataGridView = New System.Windows.Forms.DataGridView()
+        Me.StaffIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StaffNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HPNumDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         StaffIDLabel1 = New System.Windows.Forms.Label()
         StaffNameLabel = New System.Windows.Forms.Label()
         HPNumLabel = New System.Windows.Forms.Label()
@@ -72,6 +77,56 @@ Partial Class RegistrationPage
         CType(Me.UserBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'StaffIDLabel1
+        '
+        StaffIDLabel1.AutoSize = True
+        StaffIDLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        StaffIDLabel1.Location = New System.Drawing.Point(180, 93)
+        StaffIDLabel1.Name = "StaffIDLabel1"
+        StaffIDLabel1.Size = New System.Drawing.Size(62, 16)
+        StaffIDLabel1.TabIndex = 42
+        StaffIDLabel1.Text = "Staff ID:"
+        '
+        'StaffNameLabel
+        '
+        StaffNameLabel.AutoSize = True
+        StaffNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        StaffNameLabel.Location = New System.Drawing.Point(180, 51)
+        StaffNameLabel.Name = "StaffNameLabel"
+        StaffNameLabel.Size = New System.Drawing.Size(88, 16)
+        StaffNameLabel.TabIndex = 43
+        StaffNameLabel.Text = "Staff Name:"
+        '
+        'HPNumLabel
+        '
+        HPNumLabel.AutoSize = True
+        HPNumLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        HPNumLabel.Location = New System.Drawing.Point(180, 154)
+        HPNumLabel.Name = "HPNumLabel"
+        HPNumLabel.Size = New System.Drawing.Size(64, 16)
+        HPNumLabel.TabIndex = 44
+        HPNumLabel.Text = "HPNum:"
+        '
+        'UsernameLabel
+        '
+        UsernameLabel.AutoSize = True
+        UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        UsernameLabel.Location = New System.Drawing.Point(180, 202)
+        UsernameLabel.Name = "UsernameLabel"
+        UsernameLabel.Size = New System.Drawing.Size(83, 16)
+        UsernameLabel.TabIndex = 45
+        UsernameLabel.Text = "Username:"
+        '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        PasswordLabel.Location = New System.Drawing.Point(180, 268)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(80, 16)
+        PasswordLabel.TabIndex = 46
+        PasswordLabel.Text = "Password:"
         '
         'BindingNavigatorSeparator
         '
@@ -291,16 +346,6 @@ Partial Class RegistrationPage
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Me.UserTableAdapter
         '
-        'StaffIDLabel1
-        '
-        StaffIDLabel1.AutoSize = True
-        StaffIDLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StaffIDLabel1.Location = New System.Drawing.Point(180, 93)
-        StaffIDLabel1.Name = "StaffIDLabel1"
-        StaffIDLabel1.Size = New System.Drawing.Size(62, 16)
-        StaffIDLabel1.TabIndex = 42
-        StaffIDLabel1.Text = "Staff ID:"
-        '
         'StaffIDTextBox1
         '
         Me.StaffIDTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBindingSource1, "StaffID", True))
@@ -308,16 +353,6 @@ Partial Class RegistrationPage
         Me.StaffIDTextBox1.Name = "StaffIDTextBox1"
         Me.StaffIDTextBox1.Size = New System.Drawing.Size(304, 20)
         Me.StaffIDTextBox1.TabIndex = 43
-        '
-        'StaffNameLabel
-        '
-        StaffNameLabel.AutoSize = True
-        StaffNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StaffNameLabel.Location = New System.Drawing.Point(180, 51)
-        StaffNameLabel.Name = "StaffNameLabel"
-        StaffNameLabel.Size = New System.Drawing.Size(88, 16)
-        StaffNameLabel.TabIndex = 43
-        StaffNameLabel.Text = "Staff Name:"
         '
         'StaffNameTextBox
         '
@@ -327,16 +362,6 @@ Partial Class RegistrationPage
         Me.StaffNameTextBox.Size = New System.Drawing.Size(304, 20)
         Me.StaffNameTextBox.TabIndex = 44
         '
-        'HPNumLabel
-        '
-        HPNumLabel.AutoSize = True
-        HPNumLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        HPNumLabel.Location = New System.Drawing.Point(180, 154)
-        HPNumLabel.Name = "HPNumLabel"
-        HPNumLabel.Size = New System.Drawing.Size(64, 16)
-        HPNumLabel.TabIndex = 44
-        HPNumLabel.Text = "HPNum:"
-        '
         'HPNumTextBox
         '
         Me.HPNumTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBindingSource1, "HPNum", True))
@@ -345,16 +370,6 @@ Partial Class RegistrationPage
         Me.HPNumTextBox.Size = New System.Drawing.Size(304, 20)
         Me.HPNumTextBox.TabIndex = 45
         '
-        'UsernameLabel
-        '
-        UsernameLabel.AutoSize = True
-        UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        UsernameLabel.Location = New System.Drawing.Point(180, 202)
-        UsernameLabel.Name = "UsernameLabel"
-        UsernameLabel.Size = New System.Drawing.Size(83, 16)
-        UsernameLabel.TabIndex = 45
-        UsernameLabel.Text = "Username:"
-        '
         'UsernameTextBox
         '
         Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBindingSource1, "Username", True))
@@ -362,16 +377,6 @@ Partial Class RegistrationPage
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(304, 20)
         Me.UsernameTextBox.TabIndex = 46
-        '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.Location = New System.Drawing.Point(180, 268)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(80, 16)
-        PasswordLabel.TabIndex = 46
-        PasswordLabel.Text = "Password:"
         '
         'PasswordTextBox
         '
@@ -387,12 +392,48 @@ Partial Class RegistrationPage
         Me.UserDataGridView.AllowUserToDeleteRows = False
         Me.UserDataGridView.AutoGenerateColumns = False
         Me.UserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.UserDataGridView.DataSource = Me.UserBindingSource
+        Me.UserDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StaffIDDataGridViewTextBoxColumn, Me.StaffNameDataGridViewTextBoxColumn, Me.HPNumDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn})
+        Me.UserDataGridView.DataSource = Me.UserBindingSource1
         Me.UserDataGridView.Location = New System.Drawing.Point(115, 404)
         Me.UserDataGridView.Name = "UserDataGridView"
         Me.UserDataGridView.ReadOnly = True
         Me.UserDataGridView.Size = New System.Drawing.Size(542, 239)
         Me.UserDataGridView.TabIndex = 47
+        '
+        'StaffIDDataGridViewTextBoxColumn
+        '
+        Me.StaffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID"
+        Me.StaffIDDataGridViewTextBoxColumn.HeaderText = "StaffID"
+        Me.StaffIDDataGridViewTextBoxColumn.Name = "StaffIDDataGridViewTextBoxColumn"
+        Me.StaffIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'StaffNameDataGridViewTextBoxColumn
+        '
+        Me.StaffNameDataGridViewTextBoxColumn.DataPropertyName = "StaffName"
+        Me.StaffNameDataGridViewTextBoxColumn.HeaderText = "StaffName"
+        Me.StaffNameDataGridViewTextBoxColumn.Name = "StaffNameDataGridViewTextBoxColumn"
+        Me.StaffNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'HPNumDataGridViewTextBoxColumn
+        '
+        Me.HPNumDataGridViewTextBoxColumn.DataPropertyName = "HPNum"
+        Me.HPNumDataGridViewTextBoxColumn.HeaderText = "HPNum"
+        Me.HPNumDataGridViewTextBoxColumn.Name = "HPNumDataGridViewTextBoxColumn"
+        Me.HPNumDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
         '
         'RegistrationPage
         '
@@ -463,4 +504,9 @@ Partial Class RegistrationPage
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents UserDataGridView As DataGridView
+    Friend WithEvents StaffIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StaffNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HPNumDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
