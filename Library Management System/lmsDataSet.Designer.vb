@@ -37,9 +37,9 @@ Partial Public Class lmsDataSet
     
     Private relationBookBorrow As Global.System.Data.DataRelation
     
-    Private relationBorrowerBorrow As Global.System.Data.DataRelation
-    
     Private relationBorrowLate_Return_Fines As Global.System.Data.DataRelation
+    
+    Private relationBorrowerBorrow As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -297,8 +297,8 @@ Partial Public Class lmsDataSet
             End If
         End If
         Me.relationBookBorrow = Me.Relations("BookBorrow")
-        Me.relationBorrowerBorrow = Me.Relations("BorrowerBorrow")
         Me.relationBorrowLate_Return_Fines = Me.Relations("BorrowLate Return Fines")
+        Me.relationBorrowerBorrow = Me.Relations("BorrowerBorrow")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -321,10 +321,10 @@ Partial Public Class lmsDataSet
         MyBase.Tables.Add(Me.tableUser)
         Me.relationBookBorrow = New Global.System.Data.DataRelation("BookBorrow", New Global.System.Data.DataColumn() {Me.tableBook.ISBNColumn}, New Global.System.Data.DataColumn() {Me.tableBorrow.ISBNColumn}, false)
         Me.Relations.Add(Me.relationBookBorrow)
-        Me.relationBorrowerBorrow = New Global.System.Data.DataRelation("BorrowerBorrow", New Global.System.Data.DataColumn() {Me.tableBorrower.BorrowerIDColumn}, New Global.System.Data.DataColumn() {Me.tableBorrow.BorrowerIDColumn}, false)
-        Me.Relations.Add(Me.relationBorrowerBorrow)
         Me.relationBorrowLate_Return_Fines = New Global.System.Data.DataRelation("BorrowLate Return Fines", New Global.System.Data.DataColumn() {Me.tableBorrow.BorrowIDColumn}, New Global.System.Data.DataColumn() {Me.tableLate_Return_Fines.BorrowIDColumn}, false)
         Me.Relations.Add(Me.relationBorrowLate_Return_Fines)
+        Me.relationBorrowerBorrow = New Global.System.Data.DataRelation("BorrowerBorrow", New Global.System.Data.DataColumn() {Me.tableBorrower.BorrowerIDColumn}, New Global.System.Data.DataColumn() {Me.tableBorrow.BorrowerIDColumn}, false)
+        Me.Relations.Add(Me.relationBorrowerBorrow)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

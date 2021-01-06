@@ -92,19 +92,21 @@ Public Class BookIssueInfoPage
 
             conn.Open()
 
-            Dim strsql As String
+            Dim strsql, status As String
+            status = "Not Returned"
 
             Dim issueDate, dueDate, retDate As DateTime
             issueDate = DTPIssueDate.Value.Date
             dueDate = DTPDueDate.Value.Date
             retDate = DTPIssueDate.Value.Date
 
-            strsql = "INSERT INTO Borrow([IssueDate], [DueDate], [ReturnDate], [ISBN], [BorrowerID]) VALUES (?, ?, ?, ?, ?)"
+            strsql = "INSERT INTO Borrow([IssueDate], [DueDate], [ReturnDate], [Status], [ISBN], [BorrowerID]) VALUES (?, ?, ?, ?, ?, ?)"
 
             Dim cmd As New OleDbCommand(strsql, conn)
             cmd.Parameters.Add(New OleDbParameter("IssueDate", CType(issueDate, Date)))
             cmd.Parameters.Add(New OleDbParameter("DueDate", CType(dueDate, Date)))
             cmd.Parameters.Add(New OleDbParameter("ReturnDate", CType(retDate, Date)))
+            cmd.Parameters.Add(New OleDbParameter("Status", CType(status, String)))
             cmd.Parameters.Add(New OleDbParameter("ISBN", CType(lblISBN.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("BorrowerID", CType(BorrowerIDTextBox.Text, String)))
 
@@ -119,8 +121,6 @@ Public Class BookIssueInfoPage
     End Sub
 
     Private Sub btnSearchName_Click(sender As Object, e As EventArgs) Handles btnSearchName.Click
-        'Me.BorrowerTableAdapter.FillBy4(Me.LmsDataSet.Borrower, txtSearchName.Text)
-
         Try
             Me.BorrowerTableAdapter.FillBy1(Me.LmsDataSet.Borrower, txtSearchName.Text)
         Catch ex As System.Exception

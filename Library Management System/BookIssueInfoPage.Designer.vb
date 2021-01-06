@@ -314,9 +314,8 @@ Partial Class BookIssueInfoPage
         '
         Me.txtSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearchName.Location = New System.Drawing.Point(550, 737)
-        Me.txtSearchName.Multiline = True
         Me.txtSearchName.Name = "txtSearchName"
-        Me.txtSearchName.Size = New System.Drawing.Size(185, 44)
+        Me.txtSearchName.Size = New System.Drawing.Size(185, 27)
         Me.txtSearchName.TabIndex = 16
         '
         'btnSearchName

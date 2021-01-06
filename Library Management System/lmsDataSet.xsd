@@ -473,47 +473,6 @@ WHERE  (BorrowerName = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Borrower" msprop:Generator_TableClassName="BorrowerDataTable" msprop:Generator_TableVarName="tableBorrower" msprop:Generator_TablePropName="Borrower" msprop:Generator_RowDeletingName="BorrowerRowDeleting" msprop:Generator_RowChangingName="BorrowerRowChanging" msprop:Generator_RowEvHandlerName="BorrowerRowChangeEventHandler" msprop:Generator_RowDeletedName="BorrowerRowDeleted" msprop:Generator_UserTableName="Borrower" msprop:Generator_RowChangedName="BorrowerRowChanged" msprop:Generator_RowEvArgName="BorrowerRowChangeEvent" msprop:Generator_RowClassName="BorrowerRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="BorrowerID" msprop:Generator_ColumnVarNameInTable="columnBorrowerID" msprop:Generator_ColumnPropNameInRow="BorrowerID" msprop:Generator_ColumnPropNameInTable="BorrowerIDColumn" msprop:Generator_UserColumnName="BorrowerID">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="BorrowerName" msprop:Generator_ColumnVarNameInTable="columnBorrowerName" msprop:Generator_ColumnPropNameInRow="BorrowerName" msprop:Generator_ColumnPropNameInTable="BorrowerNameColumn" msprop:Generator_UserColumnName="BorrowerName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ICNum" msprop:Generator_ColumnVarNameInTable="columnICNum" msprop:Generator_ColumnPropNameInRow="ICNum" msprop:Generator_ColumnPropNameInTable="ICNumColumn" msprop:Generator_UserColumnName="ICNum" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="HPNum" msprop:Generator_ColumnVarNameInTable="columnHPNum" msprop:Generator_ColumnPropNameInRow="HPNum" msprop:Generator_ColumnPropNameInTable="HPNumColumn" msprop:Generator_UserColumnName="HPNum" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Late_x0020_Return_x0020_Fines" msprop:Generator_TableClassName="Late_Return_FinesDataTable" msprop:Generator_TableVarName="tableLate_Return_Fines" msprop:Generator_TablePropName="Late_Return_Fines" msprop:Generator_RowDeletingName="Late_Return_FinesRowDeleting" msprop:Generator_RowChangingName="Late_Return_FinesRowChanging" msprop:Generator_RowEvHandlerName="Late_Return_FinesRowChangeEventHandler" msprop:Generator_RowDeletedName="Late_Return_FinesRowDeleted" msprop:Generator_UserTableName="Late Return Fines" msprop:Generator_RowChangedName="Late_Return_FinesRowChanged" msprop:Generator_RowEvArgName="Late_Return_FinesRowChangeEvent" msprop:Generator_RowClassName="Late_Return_FinesRow">
           <xs:complexType>
             <xs:sequence>
@@ -572,6 +531,47 @@ WHERE  (BorrowerName = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Borrower" msprop:Generator_TableClassName="BorrowerDataTable" msprop:Generator_TableVarName="tableBorrower" msprop:Generator_TablePropName="Borrower" msprop:Generator_RowDeletingName="BorrowerRowDeleting" msprop:Generator_RowChangingName="BorrowerRowChanging" msprop:Generator_RowEvHandlerName="BorrowerRowChangeEventHandler" msprop:Generator_RowDeletedName="BorrowerRowDeleted" msprop:Generator_UserTableName="Borrower" msprop:Generator_RowChangedName="BorrowerRowChanged" msprop:Generator_RowEvArgName="BorrowerRowChangeEvent" msprop:Generator_RowClassName="BorrowerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BorrowerID" msprop:Generator_ColumnVarNameInTable="columnBorrowerID" msprop:Generator_ColumnPropNameInRow="BorrowerID" msprop:Generator_ColumnPropNameInTable="BorrowerIDColumn" msprop:Generator_UserColumnName="BorrowerID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BorrowerName" msprop:Generator_ColumnVarNameInTable="columnBorrowerName" msprop:Generator_ColumnPropNameInRow="BorrowerName" msprop:Generator_ColumnPropNameInTable="BorrowerNameColumn" msprop:Generator_UserColumnName="BorrowerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICNum" msprop:Generator_ColumnVarNameInTable="columnICNum" msprop:Generator_ColumnPropNameInRow="ICNum" msprop:Generator_ColumnPropNameInTable="ICNumColumn" msprop:Generator_UserColumnName="ICNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPNum" msprop:Generator_ColumnVarNameInTable="columnHPNum" msprop:Generator_ColumnPropNameInRow="HPNum" msprop:Generator_ColumnPropNameInTable="HPNumColumn" msprop:Generator_UserColumnName="HPNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -582,10 +582,6 @@ WHERE  (BorrowerName = ?)</CommandText>
       <xs:selector xpath=".//mstns:Borrow" />
       <xs:field xpath="mstns:BorrowID" />
     </xs:unique>
-    <xs:unique name="Borrower_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Borrower" />
-      <xs:field xpath="mstns:BorrowerID" />
-    </xs:unique>
     <xs:unique name="Late_x0020_Return_x0020_Fines_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Late_x0020_Return_x0020_Fines" />
       <xs:field xpath="mstns:LateRetID" />
@@ -594,12 +590,16 @@ WHERE  (BorrowerName = ?)</CommandText>
       <xs:selector xpath=".//mstns:User" />
       <xs:field xpath="mstns:StaffID" />
     </xs:unique>
+    <xs:unique name="Borrower_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Borrower" />
+      <xs:field xpath="mstns:BorrowerID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="BookBorrow" msdata:parent="Book" msdata:child="Borrow" msdata:parentkey="ISBN" msdata:childkey="ISBN" msprop:Generator_UserChildTable="Borrow" msprop:Generator_ChildPropName="GetBorrowRows" msprop:Generator_UserRelationName="BookBorrow" msprop:Generator_ParentPropName="BookRow" msprop:Generator_RelationVarName="relationBookBorrow" msprop:Generator_UserParentTable="Book" />
-      <msdata:Relationship name="BorrowerBorrow" msdata:parent="Borrower" msdata:child="Borrow" msdata:parentkey="BorrowerID" msdata:childkey="BorrowerID" msprop:Generator_UserChildTable="Borrow" msprop:Generator_ChildPropName="GetBorrowRows" msprop:Generator_UserRelationName="BorrowerBorrow" msprop:Generator_RelationVarName="relationBorrowerBorrow" msprop:Generator_UserParentTable="Borrower" msprop:Generator_ParentPropName="BorrowerRow" />
       <msdata:Relationship name="BorrowLate_x0020_Return_x0020_Fines" msdata:parent="Borrow" msdata:child="Late_x0020_Return_x0020_Fines" msdata:parentkey="BorrowID" msdata:childkey="BorrowID" msprop:Generator_UserChildTable="Late Return Fines" msprop:Generator_ChildPropName="GetLate_Return_FinesRows" msprop:Generator_UserRelationName="BorrowLate Return Fines" msprop:Generator_ParentPropName="BorrowRow" msprop:Generator_RelationVarName="relationBorrowLate_Return_Fines" msprop:Generator_UserParentTable="Borrow" />
+      <msdata:Relationship name="BorrowerBorrow" msdata:parent="Borrower" msdata:child="Borrow" msdata:parentkey="BorrowerID" msdata:childkey="BorrowerID" msprop:Generator_UserChildTable="Borrow" msprop:Generator_ChildPropName="GetBorrowRows" msprop:Generator_UserRelationName="BorrowerBorrow" msprop:Generator_RelationVarName="relationBorrowerBorrow" msprop:Generator_UserParentTable="Borrower" msprop:Generator_ParentPropName="BorrowerRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

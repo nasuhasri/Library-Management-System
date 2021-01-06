@@ -53,14 +53,15 @@ Public Class BookReturnInfoPage
         sqlListBook = "Select B.Title From Book B, Borrow BO, Borrower BR 
                         Where B.ISBN = BO.ISBN
                         And BO.BorrowerID = BR.BorrowerID
-                        And BR.ICNum='" + lblIC.Text + "'"
+                        And BR.ICNum='" + lblIC.Text + "'
+                        And BR.BorrowerName='" + lblName.Text + "'"
 
         Dim cmdListBook As New OleDbCommand(sqlListBook, conn)
         Dim readerListBook As OleDbDataReader
         readerListBook = cmdListBook.ExecuteReader()
-        chkLBooks.Items.Clear()
 
         Try
+            chkLBooks.Items.Clear()
             While readerListBook.Read()
                 chkLBooks.Items.Add(readerListBook("Title"))
             End While

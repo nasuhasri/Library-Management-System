@@ -104,70 +104,64 @@ Partial Class BorrowersInfoPage
         'BorrowerNameLabel
         '
         BorrowerNameLabel.AutoSize = True
-        BorrowerNameLabel.Location = New System.Drawing.Point(24, 93)
-        BorrowerNameLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        BorrowerNameLabel.Location = New System.Drawing.Point(32, 114)
         BorrowerNameLabel.Name = "BorrowerNameLabel"
-        BorrowerNameLabel.Size = New System.Drawing.Size(123, 20)
+        BorrowerNameLabel.Size = New System.Drawing.Size(153, 25)
         BorrowerNameLabel.TabIndex = 11
         BorrowerNameLabel.Text = "Borrower Name:"
         '
         'ICNumLabel
         '
         ICNumLabel.AutoSize = True
-        ICNumLabel.Location = New System.Drawing.Point(24, 123)
-        ICNumLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        ICNumLabel.Location = New System.Drawing.Point(32, 151)
         ICNumLabel.Name = "ICNumLabel"
-        ICNumLabel.Size = New System.Drawing.Size(89, 20)
+        ICNumLabel.Size = New System.Drawing.Size(112, 25)
         ICNumLabel.TabIndex = 12
         ICNumLabel.Text = "IC Number:"
         '
         'HPNumLabel
         '
         HPNumLabel.AutoSize = True
-        HPNumLabel.Location = New System.Drawing.Point(24, 152)
-        HPNumLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        HPNumLabel.Location = New System.Drawing.Point(32, 187)
         HPNumLabel.Name = "HPNumLabel"
-        HPNumLabel.Size = New System.Drawing.Size(95, 20)
+        HPNumLabel.Size = New System.Drawing.Size(119, 25)
         HPNumLabel.TabIndex = 13
         HPNumLabel.Text = "HP Number:"
         '
         'AddressLabel
         '
         AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(24, 185)
-        AddressLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        AddressLabel.Location = New System.Drawing.Point(32, 228)
         AddressLabel.Name = "AddressLabel"
-        AddressLabel.Size = New System.Drawing.Size(72, 20)
+        AddressLabel.Size = New System.Drawing.Size(91, 25)
         AddressLabel.TabIndex = 14
         AddressLabel.Text = "Address:"
         '
         'BorrowerIDLabel
         '
         BorrowerIDLabel.AutoSize = True
-        BorrowerIDLabel.Location = New System.Drawing.Point(29, 53)
-        BorrowerIDLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        BorrowerIDLabel.Location = New System.Drawing.Point(39, 65)
         BorrowerIDLabel.Name = "BorrowerIDLabel"
-        BorrowerIDLabel.Size = New System.Drawing.Size(98, 20)
+        BorrowerIDLabel.Size = New System.Drawing.Size(120, 25)
         BorrowerIDLabel.TabIndex = 15
         BorrowerIDLabel.Text = "Borrower ID:"
         '
         'TitleLabel
         '
         TitleLabel.AutoSize = True
-        TitleLabel.Location = New System.Drawing.Point(313, 242)
-        TitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        TitleLabel.Location = New System.Drawing.Point(417, 298)
         TitleLabel.Name = "TitleLabel"
-        TitleLabel.Size = New System.Drawing.Size(42, 20)
+        TitleLabel.Size = New System.Drawing.Size(55, 25)
         TitleLabel.TabIndex = 16
         TitleLabel.Text = "Title:"
         '
         'btnReturn
         '
         Me.btnReturn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReturn.Location = New System.Drawing.Point(572, 635)
-        Me.btnReturn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnReturn.Location = New System.Drawing.Point(763, 782)
+        Me.btnReturn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnReturn.Name = "btnReturn"
-        Me.btnReturn.Size = New System.Drawing.Size(70, 36)
+        Me.btnReturn.Size = New System.Drawing.Size(93, 44)
         Me.btnReturn.TabIndex = 12
         Me.btnReturn.Text = "Return"
         Me.btnReturn.UseVisualStyleBackColor = True
@@ -175,10 +169,10 @@ Partial Class BorrowersInfoPage
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(463, 635)
-        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDelete.Location = New System.Drawing.Point(617, 782)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(70, 36)
+        Me.btnDelete.Size = New System.Drawing.Size(93, 44)
         Me.btnDelete.TabIndex = 11
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
@@ -186,10 +180,10 @@ Partial Class BorrowersInfoPage
         'btnUpdate
         '
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.Location = New System.Drawing.Point(572, 576)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUpdate.Location = New System.Drawing.Point(763, 709)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(70, 36)
+        Me.btnUpdate.Size = New System.Drawing.Size(93, 44)
         Me.btnUpdate.TabIndex = 10
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
@@ -197,10 +191,10 @@ Partial Class BorrowersInfoPage
         'btnAdd
         '
         Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(463, 576)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdd.Location = New System.Drawing.Point(617, 709)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(70, 36)
+        Me.btnAdd.Size = New System.Drawing.Size(93, 44)
         Me.btnAdd.TabIndex = 9
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -208,10 +202,10 @@ Partial Class BorrowersInfoPage
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(214, 576)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSearch.Location = New System.Drawing.Point(285, 709)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(70, 36)
+        Me.btnSearch.Size = New System.Drawing.Size(93, 44)
         Me.btnSearch.TabIndex = 8
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -235,11 +229,11 @@ Partial Class BorrowersInfoPage
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(38, 33)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(51, 41)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(782, 311)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(1043, 383)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Borrower's Details"
@@ -250,11 +244,11 @@ Partial Class BorrowersInfoPage
         Me.TitleListBox.DataSource = Me.BookBindingSource1
         Me.TitleListBox.DisplayMember = "Title"
         Me.TitleListBox.FormattingEnabled = True
-        Me.TitleListBox.ItemHeight = 20
-        Me.TitleListBox.Location = New System.Drawing.Point(358, 242)
-        Me.TitleListBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TitleListBox.ItemHeight = 25
+        Me.TitleListBox.Location = New System.Drawing.Point(477, 298)
+        Me.TitleListBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TitleListBox.Name = "TitleListBox"
-        Me.TitleListBox.Size = New System.Drawing.Size(91, 64)
+        Me.TitleListBox.Size = New System.Drawing.Size(120, 54)
         Me.TitleListBox.TabIndex = 17
         Me.TitleListBox.ValueMember = "Title"
         '
@@ -276,10 +270,10 @@ Partial Class BorrowersInfoPage
         'BorrowerIDTextBox
         '
         Me.BorrowerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "BorrowerID", True))
-        Me.BorrowerIDTextBox.Location = New System.Drawing.Point(153, 53)
-        Me.BorrowerIDTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BorrowerIDTextBox.Location = New System.Drawing.Point(204, 65)
+        Me.BorrowerIDTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BorrowerIDTextBox.Name = "BorrowerIDTextBox"
-        Me.BorrowerIDTextBox.Size = New System.Drawing.Size(227, 26)
+        Me.BorrowerIDTextBox.Size = New System.Drawing.Size(301, 30)
         Me.BorrowerIDTextBox.TabIndex = 16
         '
         'BorrowerBindingSource
@@ -290,94 +284,92 @@ Partial Class BorrowersInfoPage
         'AddressTextBox
         '
         Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "Address", True))
-        Me.AddressTextBox.Location = New System.Drawing.Point(153, 185)
-        Me.AddressTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.AddressTextBox.Location = New System.Drawing.Point(204, 228)
+        Me.AddressTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddressTextBox.Multiline = True
         Me.AddressTextBox.Name = "AddressTextBox"
-        Me.AddressTextBox.Size = New System.Drawing.Size(227, 95)
+        Me.AddressTextBox.Size = New System.Drawing.Size(301, 116)
         Me.AddressTextBox.TabIndex = 15
         '
         'HPNumTextBox
         '
         Me.HPNumTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "HPNum", True))
-        Me.HPNumTextBox.Location = New System.Drawing.Point(153, 152)
-        Me.HPNumTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.HPNumTextBox.Location = New System.Drawing.Point(204, 187)
+        Me.HPNumTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.HPNumTextBox.Name = "HPNumTextBox"
-        Me.HPNumTextBox.Size = New System.Drawing.Size(227, 26)
+        Me.HPNumTextBox.Size = New System.Drawing.Size(301, 30)
         Me.HPNumTextBox.TabIndex = 14
         '
         'ICNumTextBox
         '
         Me.ICNumTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "ICNum", True))
-        Me.ICNumTextBox.Location = New System.Drawing.Point(153, 123)
-        Me.ICNumTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ICNumTextBox.Location = New System.Drawing.Point(204, 151)
+        Me.ICNumTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ICNumTextBox.Name = "ICNumTextBox"
-        Me.ICNumTextBox.Size = New System.Drawing.Size(227, 26)
+        Me.ICNumTextBox.Size = New System.Drawing.Size(301, 30)
         Me.ICNumTextBox.TabIndex = 13
         '
         'BorrowerNameTextBox
         '
         Me.BorrowerNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "BorrowerName", True))
-        Me.BorrowerNameTextBox.Location = New System.Drawing.Point(153, 89)
-        Me.BorrowerNameTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BorrowerNameTextBox.Location = New System.Drawing.Point(204, 110)
+        Me.BorrowerNameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BorrowerNameTextBox.Name = "BorrowerNameTextBox"
-        Me.BorrowerNameTextBox.Size = New System.Drawing.Size(227, 26)
+        Me.BorrowerNameTextBox.Size = New System.Drawing.Size(301, 30)
         Me.BorrowerNameTextBox.TabIndex = 12
         '
         'ListBooksBorrowed
         '
         Me.ListBooksBorrowed.FormattingEnabled = True
-        Me.ListBooksBorrowed.ItemHeight = 20
-        Me.ListBooksBorrowed.Location = New System.Drawing.Point(481, 67)
-        Me.ListBooksBorrowed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ListBooksBorrowed.ItemHeight = 25
+        Me.ListBooksBorrowed.Location = New System.Drawing.Point(641, 82)
+        Me.ListBooksBorrowed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListBooksBorrowed.Name = "ListBooksBorrowed"
-        Me.ListBooksBorrowed.Size = New System.Drawing.Size(262, 164)
+        Me.ListBooksBorrowed.Size = New System.Drawing.Size(348, 179)
         Me.ListBooksBorrowed.TabIndex = 11
         '
         'txtNoBooksBorrowed
         '
-        Me.txtNoBooksBorrowed.Location = New System.Drawing.Point(664, 267)
-        Me.txtNoBooksBorrowed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNoBooksBorrowed.Location = New System.Drawing.Point(885, 329)
+        Me.txtNoBooksBorrowed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNoBooksBorrowed.Name = "txtNoBooksBorrowed"
-        Me.txtNoBooksBorrowed.Size = New System.Drawing.Size(55, 26)
+        Me.txtNoBooksBorrowed.Size = New System.Drawing.Size(72, 30)
         Me.txtNoBooksBorrowed.TabIndex = 10
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(477, 33)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(636, 41)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(218, 20)
+        Me.Label6.Size = New System.Drawing.Size(268, 25)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "List of Books Have Borrowed:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(484, 271)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(645, 334)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 20)
+        Me.Label5.Size = New System.Drawing.Size(212, 25)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "No of Books Borrowed:"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(632, 421)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(843, 518)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(180, 122)
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView1.TabIndex = 17
         '
         'loadData
         '
-        Me.loadData.Location = New System.Drawing.Point(632, 364)
-        Me.loadData.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.loadData.Location = New System.Drawing.Point(843, 448)
+        Me.loadData.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.loadData.Name = "loadData"
-        Me.loadData.Size = New System.Drawing.Size(128, 46)
+        Me.loadData.Size = New System.Drawing.Size(171, 57)
         Me.loadData.TabIndex = 16
         Me.loadData.Text = "Load Data"
         Me.loadData.UseVisualStyleBackColor = True
@@ -397,7 +389,7 @@ Partial Class BorrowersInfoPage
         Me.BorrowerBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BorrowerBindingNavigator.Name = "BorrowerBindingNavigator"
         Me.BorrowerBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BorrowerBindingNavigator.Size = New System.Drawing.Size(855, 27)
+        Me.BorrowerBindingNavigator.Size = New System.Drawing.Size(1140, 27)
         Me.BorrowerBindingNavigator.TabIndex = 13
         Me.BorrowerBindingNavigator.Text = "BindingNavigator1"
         '
@@ -413,7 +405,7 @@ Partial Class BorrowersInfoPage
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 24)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 24)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -454,7 +446,7 @@ Partial Class BorrowersInfoPage
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(38, 23)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(49, 27)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
@@ -497,11 +489,11 @@ Partial Class BorrowersInfoPage
         'txtSearch
         '
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(38, 576)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Location = New System.Drawing.Point(51, 709)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Multiline = True
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(140, 36)
+        Me.txtSearch.Size = New System.Drawing.Size(185, 43)
         Me.txtSearch.TabIndex = 14
         '
         'BorrowerTableAdapter
@@ -555,12 +547,12 @@ Partial Class BorrowersInfoPage
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.BorrowerDataGridView.DefaultCellStyle = DataGridViewCellStyle2
-        Me.BorrowerDataGridView.Location = New System.Drawing.Point(38, 364)
-        Me.BorrowerDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BorrowerDataGridView.Location = New System.Drawing.Point(51, 448)
+        Me.BorrowerDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BorrowerDataGridView.Name = "BorrowerDataGridView"
         Me.BorrowerDataGridView.ReadOnly = True
         Me.BorrowerDataGridView.RowTemplate.Height = 24
-        Me.BorrowerDataGridView.Size = New System.Drawing.Size(565, 179)
+        Me.BorrowerDataGridView.Size = New System.Drawing.Size(753, 220)
         Me.BorrowerDataGridView.TabIndex = 17
         '
         'DataGridViewTextBoxColumn1
@@ -614,9 +606,9 @@ Partial Class BorrowersInfoPage
         '
         'BorrowersInfoPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(855, 609)
+        Me.ClientSize = New System.Drawing.Size(1140, 881)
         Me.Controls.Add(Me.BorrowerDataGridView)
         Me.Controls.Add(Me.loadData)
         Me.Controls.Add(Me.DataGridView1)
@@ -628,7 +620,7 @@ Partial Class BorrowersInfoPage
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "BorrowersInfoPage"
         Me.Text = "Borrowers Information Page"
         Me.GroupBox1.ResumeLayout(False)
