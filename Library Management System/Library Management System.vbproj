@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{87CDCC09-27AD-4B7B-A8FA-B83521D5CDB5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Library_Management_System.MenuListPage</StartupObject>
+    <StartupObject>Library_Management_System.BorrowersInfoPage</StartupObject>
     <RootNamespace>Library_Management_System</RootNamespace>
     <AssemblyName>Library Management System</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -101,6 +101,12 @@
       <DependentUpon>BorrowersInfoPage.vb</DependentUpon>
     </Compile>
     <Compile Include="BorrowersInfoPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowersInfoPage2.Designer.vb">
+      <DependentUpon>BorrowersInfoPage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowersInfoPage2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeleteBooksPage.Designer.vb">
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowersInfoPage.resx">
       <DependentUpon>BorrowersInfoPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowersInfoPage2.resx">
+      <DependentUpon>BorrowersInfoPage2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteBooksPage.resx">
       <DependentUpon>DeleteBooksPage.vb</DependentUpon>

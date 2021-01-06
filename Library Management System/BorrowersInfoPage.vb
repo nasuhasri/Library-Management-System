@@ -187,6 +187,7 @@ Public Class BorrowersInfoPage
         End Try
     End Sub
 
+
     'Rujukan untuk access database
     'Private Sub loadData_Click(sender As Object, e As EventArgs) Handles loadData.Click
     '    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Library Management System\lms.accdb")
