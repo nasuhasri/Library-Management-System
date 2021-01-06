@@ -119,7 +119,6 @@ Public Class BookIssueInfoPage
     End Sub
 
     Private Sub btnSearchName_Click(sender As Object, e As EventArgs) Handles btnSearchName.Click
-        Me.BorrowerTableAdapter.FillBy3(Me.LmsDataSet.Borrower, txtSearchName.Text)
+        Me.BorrowerTableAdapter.FillBy1(Me.LmsDataSet.Borrower, txtSearchName.Text)
     End Sub
-
 End Class

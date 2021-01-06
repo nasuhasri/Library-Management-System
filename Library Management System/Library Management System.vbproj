@@ -126,16 +126,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lmsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="lmsDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lmsDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="lmsDataSet2.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.Designer.vb">
       <DependentUpon>LoginPage.vb</DependentUpon>
     </Compile>
@@ -249,28 +239,6 @@
     </None>
     <None Include="lmsDataSet.xss">
       <DependentUpon>lmsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="lmsDataSet1.xsc">
-      <DependentUpon>lmsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="lmsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>lmsDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="lmsDataSet1.xss">
-      <DependentUpon>lmsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="lmsDataSet2.xsc">
-      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="lmsDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>lmsDataSet2.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="lmsDataSet2.xss">
-      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
