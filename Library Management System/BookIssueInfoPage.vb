@@ -119,6 +119,12 @@ Public Class BookIssueInfoPage
     End Sub
 
     Private Sub btnSearchName_Click(sender As Object, e As EventArgs) Handles btnSearchName.Click
-        Me.BorrowerTableAdapter.FillBy1(Me.LmsDataSet.Borrower, txtSearchName.Text)
+        'Me.BorrowerTableAdapter.FillBy4(Me.LmsDataSet.Borrower, txtSearchName.Text)
+
+        Try
+            Me.BorrowerTableAdapter.FillBy1(Me.LmsDataSet.Borrower, txtSearchName.Text)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

@@ -63,6 +63,7 @@ Partial Class BookIssueInfoPage
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BorrowerTableAdapter1 = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         BorrowerIDLabel = New System.Windows.Forms.Label()
         BorrowerNameLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
@@ -424,6 +425,10 @@ Partial Class BookIssueInfoPage
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
+        'BorrowerTableAdapter1
+        '
+        Me.BorrowerTableAdapter1.ClearBeforeFill = True
+        '
         'BookIssueInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -491,4 +496,5 @@ Partial Class BookIssueInfoPage
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents BorrowerTableAdapter1 As lmsDataSetTableAdapters.BorrowerTableAdapter
 End Class
