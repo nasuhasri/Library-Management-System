@@ -79,8 +79,9 @@ Public Class BookReturnInfoPage
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
         conn.Open()
 
-        Dim sqlBook, sqlLateRet As String
+        Dim sqlBook As String
         Dim amtFines As Decimal = 0
+        Dim intDays As Integer
 
         Dim intIndex As Integer
         For intIndex = 0 To chkLBooks.CheckedItems.Count - 1
@@ -97,6 +98,9 @@ Public Class BookReturnInfoPage
             readerBook = cmdBook.ExecuteReader()
 
             Dim retStatus As Boolean
+            intDays = calcFines()
+
+            MessageBox.Show(intDays)
 
             While readerBook.Read()
                 lblISBN.Text = readerBook("ISBN")
@@ -112,7 +116,7 @@ Public Class BookReturnInfoPage
                     lblRetStatus.Text = "YES"
                     MessageBox.Show("You have late return fines that need to be settled!", "Return Book Failed: LMS",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    amtFines = calcFines()
+                    amtFines = intDays * 0.7
                     lblRetFines.Text = amtFines.ToString("C")
                 Else
                     lblRetStatus.Text = "NO"
@@ -129,7 +133,7 @@ Public Class BookReturnInfoPage
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
         conn.Open()
 
-        Dim sqlGetDate As String
+        Dim sqlGetDate, sqlLateRet As String
         Dim amtFines As Decimal = 0
         Dim retDate As Date = Today.ToString("d")
         Dim duedate As Date
@@ -152,11 +156,38 @@ Public Class BookReturnInfoPage
 
         span = retDate - duedate
         intDays = span.TotalDays.ToString()
+
+        Dim status As Boolean = True
+
+        If intDays >= 1 Then
+            sqlLateRet = "UPDATE Borrow B, Borrower BR SET B.LateRetStatus=1
+                        WHERE B.BorrowerID = BR.BorrowerID
+                        AND BR.BorrowerName='" + lblName.Text + "'
+                        AND B.ISBN='" + lblISBN.Text + "'"
+
+            'sqlLateRet = "UPDATE Borrow B 
+            '               SET B.LateRetStatus = 1
+            '               FROM B INNER JOIN  Borrower BR ON B.BorrowerID = BR.BorrowerID
+            '                Where B.ISBN='" + lblISBN.Text + "'"
+
+            Dim cmdLateRetStatus As New OleDbCommand(sqlLateRet, conn)
+
+            Try
+                cmdLateRetStatus.ExecuteNonQuery()
+                'cmdLateRetStatus.Parameters.Add(New OleDbParameter("LateRetStatus", CType(True, Boolean)))
+                MessageBox.Show("Update Late Return Status Success!", "Return Book Success: LMS",
+                            MessageBoxButtons.OK)
+            Catch ex As Exception
+                MsgBox("Error Occured! " & ex.Message.ToString(), MsgBoxStyle.OkOnly Or
+                   MsgBoxStyle.Information, "Update Late Return Status Failed!")
+            End Try
+        End If
+
         amtFines = intDays * 0.7
 
         conn.Close()
 
-        Return amtFines
+        Return intDays
     End Function
 
     Private Sub btnReturnBook_Click(sender As Object, e As EventArgs) Handles btnReturnBook.Click
