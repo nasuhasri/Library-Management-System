@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{87CDCC09-27AD-4B7B-A8FA-B83521D5CDB5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Library_Management_System.My.MyApplication</StartupObject>
+    <StartupObject>Library_Management_System.Start_Up</StartupObject>
     <RootNamespace>Library_Management_System</RootNamespace>
     <AssemblyName>Library Management System</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -130,6 +130,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>lmsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lmsDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.Designer.vb">
       <DependentUpon>LoginPage.vb</DependentUpon>
@@ -255,6 +260,17 @@
     </None>
     <None Include="lmsDataSet1.xss">
       <DependentUpon>lmsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="lmsDataSet2.xsc">
+      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="lmsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lmsDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lmsDataSet2.xss">
+      <DependentUpon>lmsDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

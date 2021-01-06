@@ -43,10 +43,9 @@ Partial Class MenuListPage
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 33)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(797, 399)
+        Me.PictureBox1.Size = New System.Drawing.Size(598, 324)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
@@ -56,8 +55,7 @@ Partial Class MenuListPage
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BorrowerToolStripMenuItem, Me.UserToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(795, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(596, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -65,73 +63,72 @@ Partial Class MenuListPage
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BookDetailsToolStripMenuItem, Me.BookIssuesToolStripMenuItem, Me.BookReturnToolStripMenuItem, Me.LateReturnToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'BookDetailsToolStripMenuItem
         '
         Me.BookDetailsToolStripMenuItem.Name = "BookDetailsToolStripMenuItem"
-        Me.BookDetailsToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.BookDetailsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BookDetailsToolStripMenuItem.Text = "Book Details"
         '
         'BookIssuesToolStripMenuItem
         '
         Me.BookIssuesToolStripMenuItem.Name = "BookIssuesToolStripMenuItem"
-        Me.BookIssuesToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.BookIssuesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BookIssuesToolStripMenuItem.Text = "Book Issues"
         '
         'BookReturnToolStripMenuItem
         '
         Me.BookReturnToolStripMenuItem.Name = "BookReturnToolStripMenuItem"
-        Me.BookReturnToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.BookReturnToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BookReturnToolStripMenuItem.Text = "Book Return"
         '
         'LateReturnToolStripMenuItem
         '
         Me.LateReturnToolStripMenuItem.Name = "LateReturnToolStripMenuItem"
-        Me.LateReturnToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.LateReturnToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LateReturnToolStripMenuItem.Text = "Late Return "
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'BorrowerToolStripMenuItem
         '
         Me.BorrowerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BorrowerDetailsToolStripMenuItem})
         Me.BorrowerToolStripMenuItem.Name = "BorrowerToolStripMenuItem"
-        Me.BorrowerToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.BorrowerToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.BorrowerToolStripMenuItem.Text = "Borrower"
         '
         'BorrowerDetailsToolStripMenuItem
         '
         Me.BorrowerDetailsToolStripMenuItem.Name = "BorrowerDetailsToolStripMenuItem"
-        Me.BorrowerDetailsToolStripMenuItem.Size = New System.Drawing.Size(195, 26)
+        Me.BorrowerDetailsToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.BorrowerDetailsToolStripMenuItem.Text = "Borrower Details"
         '
         'UserToolStripMenuItem
         '
         Me.UserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserDetailsToolStripMenuItem})
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(54, 24)
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
         Me.UserToolStripMenuItem.Text = "User "
         '
         'UserDetailsToolStripMenuItem
         '
         Me.UserDetailsToolStripMenuItem.Name = "UserDetailsToolStripMenuItem"
-        Me.UserDetailsToolStripMenuItem.Size = New System.Drawing.Size(163, 26)
+        Me.UserDetailsToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.UserDetailsToolStripMenuItem.Text = "User Details"
         '
         'MenuListPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 430)
+        Me.ClientSize = New System.Drawing.Size(596, 349)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MenuListPage"
         Me.Text = "Menu Lists Page"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

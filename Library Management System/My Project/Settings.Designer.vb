@@ -75,6 +75,17 @@ Namespace My
                 Return CType(Me("lmsConnectionString1"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bin\Debug\lms.accdb"& _ 
+            "")>  _
+        Public ReadOnly Property lmsConnectionString2() As String
+            Get
+                Return CType(Me("lmsConnectionString2"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
