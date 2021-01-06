@@ -79,7 +79,7 @@ Public Class BookReturnInfoPage
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
         conn.Open()
 
-        Dim sqlBook As String
+        Dim sqlBook, sqlLateRet As String
         Dim amtFines As Decimal = 0
 
         Dim intIndex As Integer
@@ -112,7 +112,7 @@ Public Class BookReturnInfoPage
                     lblRetStatus.Text = "YES"
                     MessageBox.Show("You have late return fines that need to be settled!", "Return Book Failed: LMS",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    amtFines = 5.0
+                    amtFines = calcFines()
                     lblRetFines.Text = amtFines.ToString("C")
                 Else
                     lblRetStatus.Text = "NO"
@@ -120,7 +120,44 @@ Public Class BookReturnInfoPage
                 End If
             End While
         Next
+
+        conn.Close()
     End Sub
+
+    Function calcFines()
+        Dim conn As New OleDbConnection
+        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
+        conn.Open()
+
+        Dim sqlGetDate As String
+        Dim amtFines As Decimal = 0
+        Dim retDate As Date = Today.ToString("d")
+        Dim duedate As Date
+        Dim span As TimeSpan
+        Dim intDays As Integer
+
+
+        sqlGetDate = "Select B.ReturnDate, B.DueDate From Borrow B, Borrower BR, Book BK
+                        Where B.BorrowerID = BR.BorrowerID
+                        And BK.Title='" + lblTitle.Text + "'
+                        And BR.BorrowerName='" + lblName.Text + "'
+                        Or BR.ICNum='" + lblIC.Text + "'"
+
+        Dim cmdDate As New OleDbCommand(sqlGetDate, conn)
+        Dim readerDate As OleDbDataReader
+        readerDate = cmdDate.ExecuteReader()
+        readerDate.Read()
+
+        duedate = readerDate("DueDate")
+
+        span = retDate - duedate
+        intDays = span.TotalDays.ToString()
+        amtFines = intDays * 0.7
+
+        conn.Close()
+
+        Return amtFines
+    End Function
 
     Private Sub btnReturnBook_Click(sender As Object, e As EventArgs) Handles btnReturnBook.Click
         MessageBox.Show("Are You Sure You Want To Return The Book?")
@@ -168,5 +205,6 @@ Public Class BookReturnInfoPage
         '    MessageBox.Show("Delete Records In Table Borrower Failed: " & ex.Message.ToString(),
         '                    "Delete Data: LMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
         'End Try
+        conn.Close()
     End Sub
 End Class
