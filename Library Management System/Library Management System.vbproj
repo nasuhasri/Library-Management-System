@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{87CDCC09-27AD-4B7B-A8FA-B83521D5CDB5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Library_Management_System.BookIssueInfoPage</StartupObject>
+    <StartupObject>Library_Management_System.BookReturnInfoPage</StartupObject>
     <RootNamespace>Library_Management_System</RootNamespace>
     <AssemblyName>Library Management System</AssemblyName>
     <FileAlignment>512</FileAlignment>

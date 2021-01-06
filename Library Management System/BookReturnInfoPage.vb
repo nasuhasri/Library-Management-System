@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.TimeSpan
 
 Public Class BookReturnInfoPage
     Private Sub BookReturnInfoPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -33,8 +34,6 @@ Public Class BookReturnInfoPage
         If (cmbSearch.SelectedIndex = 0) Or (cmbSearch.SelectedIndex = 1) Then
             strsql = "select BorrowerName, ICNum from Borrower where BorrowerName='" + txtSearch.Text + "' OR " _
                         & "ICNum='" + txtSearch.Text + "'"
-            'ElseIf cmbSearch.SelectedIndex = 1 Then
-            '    strsql = "select ICNum from Borrower where ICNum='" + txtSearch.Text + "'"
         End If
 
         Dim cmd As New OleDbCommand(strsql, conn)
@@ -107,7 +106,6 @@ Public Class BookReturnInfoPage
                 lblPubName.Text = readerBook("PublisherName")
                 lblIssueDate.Text = readerBook("IssueDate")
                 lblDueDate.Text = readerBook("DueDate")
-                'lblRetStatus.Text = readerBook("LateRetStatus")
                 retStatus = readerBook("LateRetStatus")
 
                 If retStatus = True Then
@@ -170,8 +168,5 @@ Public Class BookReturnInfoPage
         '    MessageBox.Show("Delete Records In Table Borrower Failed: " & ex.Message.ToString(),
         '                    "Delete Data: LMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
         'End Try
-
-
-
     End Sub
 End Class
