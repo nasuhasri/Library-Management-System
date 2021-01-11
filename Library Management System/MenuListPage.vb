@@ -27,4 +27,9 @@
         Me.Hide()
         bookDetailsForm.Show()
     End Sub
+
+    Private Sub LateReturnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LateReturnToolStripMenuItem.Click
+        Me.Hide()
+        LateReturnInfoPage.Show()
+    End Sub
 End Class

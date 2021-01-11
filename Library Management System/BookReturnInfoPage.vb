@@ -98,7 +98,7 @@ Public Class BookReturnInfoPage
             readerBook = cmdBook.ExecuteReader()
 
             Dim retStatus As Boolean
-            intDays = calcFines()
+            intDays = calcDays()
 
             MessageBox.Show(intDays)
 
@@ -128,14 +128,14 @@ Public Class BookReturnInfoPage
         conn.Close()
     End Sub
 
-    Function calcFines()
+    Public Function calcDays()
         Dim conn As New OleDbConnection
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
         conn.Open()
 
         Dim sqlGetDate, sqlLateRet As String
         Dim amtFines As Decimal = 0
-        Dim retDate As Date = Today.ToString("d")
+        Dim todayDate As Date = Today.ToString("d")
         Dim duedate As Date
         Dim span As TimeSpan
         Dim intDays As Integer
@@ -154,7 +154,7 @@ Public Class BookReturnInfoPage
 
         duedate = readerDate("DueDate")
 
-        span = retDate - duedate
+        span = todayDate - duedate
         intDays = span.TotalDays.ToString()
 
         Dim status As Boolean = True

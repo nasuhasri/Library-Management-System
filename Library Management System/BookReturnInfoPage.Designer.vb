@@ -472,7 +472,7 @@ Partial Class BookReturnInfoPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1199, 871)
+        Me.ClientSize = New System.Drawing.Size(1199, 912)
         Me.Controls.Add(Me.lblDummy)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnBack)

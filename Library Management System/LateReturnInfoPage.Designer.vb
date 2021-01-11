@@ -24,9 +24,9 @@ Partial Class LateReturnInfoPage
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LateReturnInfoPage))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtHPNum = New System.Windows.Forms.TextBox()
-        Me.txtICNum = New System.Windows.Forms.TextBox()
-        Me.txtBorrowersName = New System.Windows.Forms.TextBox()
+        Me.lblHPNum = New System.Windows.Forms.Label()
+        Me.lblIC = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,14 +37,14 @@ Partial Class LateReturnInfoPage
         Me.cmbSearch = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtLateRetFines = New System.Windows.Forms.TextBox()
-        Me.txtDueDate = New System.Windows.Forms.TextBox()
-        Me.txtIssueDate = New System.Windows.Forms.TextBox()
-        Me.txtPubName = New System.Windows.Forms.TextBox()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.txtPubYear = New System.Windows.Forms.TextBox()
-        Me.txtISBN = New System.Windows.Forms.TextBox()
+        Me.lblLateRetFines = New System.Windows.Forms.Label()
+        Me.lblDueDate = New System.Windows.Forms.Label()
+        Me.lblIssueDate = New System.Windows.Forms.Label()
+        Me.lblPubNm = New System.Windows.Forms.Label()
+        Me.lblAuthor = New System.Windows.Forms.Label()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lblPubYr = New System.Windows.Forms.Label()
+        Me.lblISBN = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -54,15 +54,16 @@ Partial Class LateReturnInfoPage
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DTPPayment = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtPayment = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnGenRecipt = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.btnReturn = New System.Windows.Forms.Button()
+        Me.lblTotalFines = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -71,45 +72,57 @@ Partial Class LateReturnInfoPage
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtHPNum)
-        Me.GroupBox1.Controls.Add(Me.txtICNum)
-        Me.GroupBox1.Controls.Add(Me.txtBorrowersName)
+        Me.GroupBox1.Controls.Add(Me.lblHPNum)
+        Me.GroupBox1.Controls.Add(Me.lblIC)
+        Me.GroupBox1.Controls.Add(Me.lblName)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(39, 171)
+        Me.GroupBox1.Location = New System.Drawing.Point(39, 149)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1062, 169)
+        Me.GroupBox1.Size = New System.Drawing.Size(1062, 144)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Borrower's Details"
         '
-        'txtHPNum
+        'lblHPNum
         '
-        Me.txtHPNum.Location = New System.Drawing.Point(208, 116)
-        Me.txtHPNum.Name = "txtHPNum"
-        Me.txtHPNum.Size = New System.Drawing.Size(455, 30)
-        Me.txtHPNum.TabIndex = 5
+        Me.lblHPNum.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblHPNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHPNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblHPNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHPNum.Location = New System.Drawing.Point(256, 108)
+        Me.lblHPNum.Name = "lblHPNum"
+        Me.lblHPNum.Size = New System.Drawing.Size(243, 25)
+        Me.lblHPNum.TabIndex = 15
         '
-        'txtICNum
+        'lblIC
         '
-        Me.txtICNum.Location = New System.Drawing.Point(208, 80)
-        Me.txtICNum.Name = "txtICNum"
-        Me.txtICNum.Size = New System.Drawing.Size(455, 30)
-        Me.txtICNum.TabIndex = 4
+        Me.lblIC.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblIC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblIC.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIC.Location = New System.Drawing.Point(256, 71)
+        Me.lblIC.Name = "lblIC"
+        Me.lblIC.Size = New System.Drawing.Size(243, 25)
+        Me.lblIC.TabIndex = 14
         '
-        'txtBorrowersName
+        'lblName
         '
-        Me.txtBorrowersName.Location = New System.Drawing.Point(208, 44)
-        Me.txtBorrowersName.Name = "txtBorrowersName"
-        Me.txtBorrowersName.Size = New System.Drawing.Size(455, 30)
-        Me.txtBorrowersName.TabIndex = 3
+        Me.lblName.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(256, 36)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(243, 25)
+        Me.lblName.TabIndex = 13
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 121)
+        Me.Label3.Location = New System.Drawing.Point(6, 108)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(143, 25)
         Me.Label3.TabIndex = 2
@@ -118,7 +131,7 @@ Partial Class LateReturnInfoPage
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 85)
+        Me.Label2.Location = New System.Drawing.Point(6, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(106, 25)
         Me.Label2.TabIndex = 1
@@ -127,7 +140,7 @@ Partial Class LateReturnInfoPage
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 49)
+        Me.Label1.Location = New System.Drawing.Point(6, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 25)
         Me.Label1.TabIndex = 0
@@ -143,7 +156,7 @@ Partial Class LateReturnInfoPage
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(39, 34)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1062, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(1062, 88)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Search"
@@ -151,7 +164,7 @@ Partial Class LateReturnInfoPage
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(867, 29)
+        Me.btnSearch.Location = New System.Drawing.Point(861, 23)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(171, 57)
         Me.btnSearch.TabIndex = 10
@@ -160,7 +173,7 @@ Partial Class LateReturnInfoPage
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(600, 44)
+        Me.txtSearch.Location = New System.Drawing.Point(594, 38)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(209, 30)
         Me.txtSearch.TabIndex = 12
@@ -168,7 +181,7 @@ Partial Class LateReturnInfoPage
         'lblSearchBy
         '
         Me.lblSearchBy.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchBy.Location = New System.Drawing.Point(364, 49)
+        Me.lblSearchBy.Location = New System.Drawing.Point(358, 43)
         Me.lblSearchBy.Name = "lblSearchBy"
         Me.lblSearchBy.Size = New System.Drawing.Size(208, 25)
         Me.lblSearchBy.TabIndex = 11
@@ -177,7 +190,7 @@ Partial Class LateReturnInfoPage
         'cmbSearch
         '
         Me.cmbSearch.FormattingEnabled = True
-        Me.cmbSearch.Location = New System.Drawing.Point(142, 46)
+        Me.cmbSearch.Location = New System.Drawing.Point(136, 40)
         Me.cmbSearch.Name = "cmbSearch"
         Me.cmbSearch.Size = New System.Drawing.Size(199, 33)
         Me.cmbSearch.TabIndex = 10
@@ -186,7 +199,7 @@ Partial Class LateReturnInfoPage
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(19, 49)
+        Me.Label6.Location = New System.Drawing.Point(13, 43)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(103, 25)
         Me.Label6.TabIndex = 9
@@ -194,14 +207,14 @@ Partial Class LateReturnInfoPage
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.txtLateRetFines)
-        Me.GroupBox3.Controls.Add(Me.txtDueDate)
-        Me.GroupBox3.Controls.Add(Me.txtIssueDate)
-        Me.GroupBox3.Controls.Add(Me.txtPubName)
-        Me.GroupBox3.Controls.Add(Me.txtAuthor)
-        Me.GroupBox3.Controls.Add(Me.txtTitle)
-        Me.GroupBox3.Controls.Add(Me.txtPubYear)
-        Me.GroupBox3.Controls.Add(Me.txtISBN)
+        Me.GroupBox3.Controls.Add(Me.lblLateRetFines)
+        Me.GroupBox3.Controls.Add(Me.lblDueDate)
+        Me.GroupBox3.Controls.Add(Me.lblIssueDate)
+        Me.GroupBox3.Controls.Add(Me.lblPubNm)
+        Me.GroupBox3.Controls.Add(Me.lblAuthor)
+        Me.GroupBox3.Controls.Add(Me.lblTitle)
+        Me.GroupBox3.Controls.Add(Me.lblPubYr)
+        Me.GroupBox3.Controls.Add(Me.lblISBN)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Label9)
@@ -211,73 +224,105 @@ Partial Class LateReturnInfoPage
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(39, 369)
+        Me.GroupBox3.Location = New System.Drawing.Point(39, 317)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1062, 222)
+        Me.GroupBox3.Size = New System.Drawing.Size(1062, 237)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Book Details"
         '
-        'txtLateRetFines
+        'lblLateRetFines
         '
-        Me.txtLateRetFines.Location = New System.Drawing.Point(740, 150)
-        Me.txtLateRetFines.Name = "txtLateRetFines"
-        Me.txtLateRetFines.Size = New System.Drawing.Size(286, 30)
-        Me.txtLateRetFines.TabIndex = 17
+        Me.lblLateRetFines.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblLateRetFines.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLateRetFines.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblLateRetFines.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLateRetFines.Location = New System.Drawing.Point(740, 139)
+        Me.lblLateRetFines.Name = "lblLateRetFines"
+        Me.lblLateRetFines.Size = New System.Drawing.Size(286, 25)
+        Me.lblLateRetFines.TabIndex = 24
         '
-        'txtDueDate
+        'lblDueDate
         '
-        Me.txtDueDate.Location = New System.Drawing.Point(740, 114)
-        Me.txtDueDate.Name = "txtDueDate"
-        Me.txtDueDate.Size = New System.Drawing.Size(286, 30)
-        Me.txtDueDate.TabIndex = 15
+        Me.lblDueDate.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblDueDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDueDate.Location = New System.Drawing.Point(740, 103)
+        Me.lblDueDate.Name = "lblDueDate"
+        Me.lblDueDate.Size = New System.Drawing.Size(286, 25)
+        Me.lblDueDate.TabIndex = 23
         '
-        'txtIssueDate
+        'lblIssueDate
         '
-        Me.txtIssueDate.Location = New System.Drawing.Point(740, 78)
-        Me.txtIssueDate.Name = "txtIssueDate"
-        Me.txtIssueDate.Size = New System.Drawing.Size(286, 30)
-        Me.txtIssueDate.TabIndex = 14
+        Me.lblIssueDate.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblIssueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblIssueDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblIssueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIssueDate.Location = New System.Drawing.Point(740, 67)
+        Me.lblIssueDate.Name = "lblIssueDate"
+        Me.lblIssueDate.Size = New System.Drawing.Size(286, 25)
+        Me.lblIssueDate.TabIndex = 22
         '
-        'txtPubName
+        'lblPubNm
         '
-        Me.txtPubName.Location = New System.Drawing.Point(740, 42)
-        Me.txtPubName.Name = "txtPubName"
-        Me.txtPubName.Size = New System.Drawing.Size(286, 30)
-        Me.txtPubName.TabIndex = 13
+        Me.lblPubNm.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblPubNm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPubNm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblPubNm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPubNm.Location = New System.Drawing.Point(740, 31)
+        Me.lblPubNm.Name = "lblPubNm"
+        Me.lblPubNm.Size = New System.Drawing.Size(286, 25)
+        Me.lblPubNm.TabIndex = 21
         '
-        'txtAuthor
+        'lblAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(213, 150)
-        Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(286, 30)
-        Me.txtAuthor.TabIndex = 12
+        Me.lblAuthor.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblAuthor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAuthor.Location = New System.Drawing.Point(213, 140)
+        Me.lblAuthor.Name = "lblAuthor"
+        Me.lblAuthor.Size = New System.Drawing.Size(243, 25)
+        Me.lblAuthor.TabIndex = 20
         '
-        'txtTitle
+        'lblTitle
         '
-        Me.txtTitle.Location = New System.Drawing.Point(213, 114)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(286, 30)
-        Me.txtTitle.TabIndex = 11
+        Me.lblTitle.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(213, 103)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(243, 25)
+        Me.lblTitle.TabIndex = 19
         '
-        'txtPubYear
+        'lblPubYr
         '
-        Me.txtPubYear.Location = New System.Drawing.Point(213, 78)
-        Me.txtPubYear.Name = "txtPubYear"
-        Me.txtPubYear.Size = New System.Drawing.Size(286, 30)
-        Me.txtPubYear.TabIndex = 10
+        Me.lblPubYr.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblPubYr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPubYr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblPubYr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPubYr.Location = New System.Drawing.Point(213, 67)
+        Me.lblPubYr.Name = "lblPubYr"
+        Me.lblPubYr.Size = New System.Drawing.Size(243, 25)
+        Me.lblPubYr.TabIndex = 18
         '
-        'txtISBN
+        'lblISBN
         '
-        Me.txtISBN.Location = New System.Drawing.Point(213, 42)
-        Me.txtISBN.Name = "txtISBN"
-        Me.txtISBN.Size = New System.Drawing.Size(286, 30)
-        Me.txtISBN.TabIndex = 9
+        Me.lblISBN.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblISBN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblISBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblISBN.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblISBN.Location = New System.Drawing.Point(213, 32)
+        Me.lblISBN.Name = "lblISBN"
+        Me.lblISBN.Size = New System.Drawing.Size(243, 25)
+        Me.lblISBN.TabIndex = 16
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(533, 150)
+        Me.Label12.Location = New System.Drawing.Point(533, 140)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(165, 25)
         Me.Label12.TabIndex = 8
@@ -286,7 +331,7 @@ Partial Class LateReturnInfoPage
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(533, 114)
+        Me.Label10.Location = New System.Drawing.Point(533, 104)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(94, 25)
         Me.Label10.TabIndex = 6
@@ -295,7 +340,7 @@ Partial Class LateReturnInfoPage
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(533, 78)
+        Me.Label9.Location = New System.Drawing.Point(533, 68)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 25)
         Me.Label9.TabIndex = 5
@@ -304,7 +349,7 @@ Partial Class LateReturnInfoPage
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(533, 42)
+        Me.Label8.Location = New System.Drawing.Point(533, 32)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(164, 25)
         Me.Label8.TabIndex = 4
@@ -313,7 +358,7 @@ Partial Class LateReturnInfoPage
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 150)
+        Me.Label7.Location = New System.Drawing.Point(6, 140)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 25)
         Me.Label7.TabIndex = 3
@@ -322,7 +367,7 @@ Partial Class LateReturnInfoPage
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 114)
+        Me.Label4.Location = New System.Drawing.Point(6, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 25)
         Me.Label4.TabIndex = 2
@@ -331,7 +376,7 @@ Partial Class LateReturnInfoPage
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 78)
+        Me.Label5.Location = New System.Drawing.Point(6, 68)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(153, 25)
         Me.Label5.TabIndex = 1
@@ -340,7 +385,7 @@ Partial Class LateReturnInfoPage
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(6, 42)
+        Me.Label13.Location = New System.Drawing.Point(6, 32)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(58, 25)
         Me.Label13.TabIndex = 0
@@ -348,26 +393,26 @@ Partial Class LateReturnInfoPage
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox4.Controls.Add(Me.lblTotalFines)
+        Me.GroupBox4.Controls.Add(Me.DTPPayment)
         Me.GroupBox4.Controls.Add(Me.Label15)
-        Me.GroupBox4.Controls.Add(Me.TextBox2)
+        Me.GroupBox4.Controls.Add(Me.txtPayment)
         Me.GroupBox4.Controls.Add(Me.Label14)
-        Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(39, 628)
+        Me.GroupBox4.Location = New System.Drawing.Point(39, 581)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(1062, 186)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Fines Payment"
         '
-        'DateTimePicker1
+        'DTPPayment
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(213, 122)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(286, 30)
-        Me.DateTimePicker1.TabIndex = 22
+        Me.DTPPayment.Location = New System.Drawing.Point(213, 122)
+        Me.DTPPayment.Name = "DTPPayment"
+        Me.DTPPayment.Size = New System.Drawing.Size(286, 30)
+        Me.DTPPayment.TabIndex = 22
         '
         'Label15
         '
@@ -378,12 +423,12 @@ Partial Class LateReturnInfoPage
         Me.Label15.TabIndex = 21
         Me.Label15.Text = "Date Payment"
         '
-        'TextBox2
+        'txtPayment
         '
-        Me.TextBox2.Location = New System.Drawing.Point(213, 80)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(286, 30)
-        Me.TextBox2.TabIndex = 20
+        Me.txtPayment.Location = New System.Drawing.Point(213, 80)
+        Me.txtPayment.Name = "txtPayment"
+        Me.txtPayment.Size = New System.Drawing.Size(286, 30)
+        Me.txtPayment.TabIndex = 20
         '
         'Label14
         '
@@ -393,13 +438,6 @@ Partial Class LateReturnInfoPage
         Me.Label14.Size = New System.Drawing.Size(186, 25)
         Me.Label14.TabIndex = 19
         Me.Label14.Text = "Borrower's Payment"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(213, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(286, 30)
-        Me.TextBox1.TabIndex = 18
         '
         'Label11
         '
@@ -413,7 +451,7 @@ Partial Class LateReturnInfoPage
         'btnGenRecipt
         '
         Me.btnGenRecipt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenRecipt.Location = New System.Drawing.Point(181, 868)
+        Me.btnGenRecipt.Location = New System.Drawing.Point(244, 792)
         Me.btnGenRecipt.Name = "btnGenRecipt"
         Me.btnGenRecipt.Size = New System.Drawing.Size(199, 75)
         Me.btnGenRecipt.TabIndex = 12
@@ -424,13 +462,35 @@ Partial Class LateReturnInfoPage
         '
         Me.PrintDialog1.UseEXDialog = True
         '
+        'btnReturn
+        '
+        Me.btnReturn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturn.Location = New System.Drawing.Point(615, 792)
+        Me.btnReturn.Name = "btnReturn"
+        Me.btnReturn.Size = New System.Drawing.Size(199, 75)
+        Me.btnReturn.TabIndex = 13
+        Me.btnReturn.Text = "Return"
+        Me.btnReturn.UseVisualStyleBackColor = True
+        '
+        'lblTotalFines
+        '
+        Me.lblTotalFines.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblTotalFines.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTotalFines.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblTotalFines.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFines.Location = New System.Drawing.Point(213, 40)
+        Me.lblTotalFines.Name = "lblTotalFines"
+        Me.lblTotalFines.Size = New System.Drawing.Size(286, 25)
+        Me.lblTotalFines.TabIndex = 25
+        '
         'LateReturnInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1190, 1055)
+        Me.ClientSize = New System.Drawing.Size(1190, 968)
+        Me.Controls.Add(Me.btnReturn)
         Me.Controls.Add(Me.btnGenRecipt)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -461,33 +521,39 @@ Partial Class LateReturnInfoPage
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtLateRetFines As TextBox
-    Friend WithEvents txtDueDate As TextBox
-    Friend WithEvents txtIssueDate As TextBox
-    Friend WithEvents txtPubName As TextBox
-    Friend WithEvents txtAuthor As TextBox
-    Friend WithEvents txtTitle As TextBox
-    Friend WithEvents txtPubYear As TextBox
-    Friend WithEvents txtISBN As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtPayment As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents DTPPayment As DateTimePicker
+    Friend WithEvents Label15 As Label
+    Friend WithEvents btnGenRecipt As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents btnReturn As Button
+    Friend WithEvents lblHPNum As Label
+    Friend WithEvents lblIC As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents PublisherNameLabel1 As Label
+    Friend WithEvents ISBNLabel1 As Label
+    Friend WithEvents YearPublishLabel1 As Label
+    Friend WithEvents AuthorLabel1 As Label
+    Friend WithEvents TitleLabel1 As Label
+    Friend WithEvents lblPubNm As Label
+    Friend WithEvents lblAuthor As Label
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents lblPubYr As Label
+    Friend WithEvents lblISBN As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents txtHPNum As TextBox
-    Friend WithEvents txtICNum As TextBox
-    Friend WithEvents txtBorrowersName As TextBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label15 As Label
-    Friend WithEvents btnGenRecipt As Button
-    Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents lblDueDate As Label
+    Friend WithEvents lblIssueDate As Label
+    Friend WithEvents lblLateRetFines As Label
+    Friend WithEvents lblTotalFines As Label
 End Class
