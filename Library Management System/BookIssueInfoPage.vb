@@ -14,6 +14,8 @@ Public Class BookIssueInfoPage
         lblSearchBy.Visible = False
         txtSearch.Visible = False
 
+        btnGoBorrowersInfoPg.Visible = False
+
         Retrive_B()
     End Sub
 
@@ -46,7 +48,7 @@ Public Class BookIssueInfoPage
             lblSearchBy.Text = "ISBN"
         ElseIf cmbSearch.SelectedIndex = 1 Then
             lblSearchBy.Text = "Author"
-        Else
+        ElseIf cmbSearch.SelectedIndex = 2 Then
             lblSearchBy.Text = "Title"
         End If
 
@@ -55,28 +57,28 @@ Public Class BookIssueInfoPage
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-
         Dim conn As New OleDbConnection
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
-                conn.Open()
+        conn.Open()
 
         Dim strsql As String
 
         If cmbSearch.SelectedIndex = 0 Then
             strsql = "select ISBN,Title from Book where ISBN='" + txtSearch.Text + "'"
-
         ElseIf cmbSearch.SelectedIndex = 1 Then
             strsql = "select ISBN,Title from Book where Author='" + txtSearch.Text + "'"
-        Else
+        ElseIf cmbSearch.SelectedIndex = 2 Then
             strsql = "select ISBN,Title from Book where Title='" + txtSearch.Text + "'"
         End If
 
+        'Get books details
         Dim cmd As New OleDbCommand(strsql, conn)
         Dim myReader As OleDbDataReader
         myReader = cmd.ExecuteReader()
         myReader.Read()
 
         Try
+            'Get book details
             lblISBN.Text = myReader("ISBN")
             lblBookTitle.Text = myReader("Title")
         Catch ex As Exception
@@ -89,7 +91,6 @@ Public Class BookIssueInfoPage
         'Insert Data into Database
         Try
             Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Library Management System\lms.accdb")
-
             conn.Open()
 
             Dim strsql, status As String
@@ -111,9 +112,8 @@ Public Class BookIssueInfoPage
             cmd.Parameters.Add(New OleDbParameter("BorrowerID", CType(BorrowerIDTextBox.Text, String)))
 
             cmd.ExecuteNonQuery()
-            MessageBox.Show("Data Successfully Saved!")
-
-
+            MessageBox.Show("Record Successfully Saved!", "Record Saved: LMS", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information)
         Catch ex As Exception
             MsgBox("Error occurred! " & ex.Message.ToString(), MsgBoxStyle.OkOnly Or
                    MsgBoxStyle.Information, "Issue Book Failed!")
@@ -122,9 +122,40 @@ Public Class BookIssueInfoPage
 
     Private Sub btnSearchName_Click(sender As Object, e As EventArgs) Handles btnSearchName.Click
         Try
-            Me.BorrowerTableAdapter.FillBy1(Me.LmsDataSet.Borrower, txtSearchName.Text)
+            Me.BorrowerTableAdapter.FillBy(Me.LmsDataSet.Borrower, txtSearchName.Text)
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
+        Dim conn As New OleDbConnection
+        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\User\source\repos\Library Management System\lms.accdb'")
+        conn.Open()
+
+        Dim sqlBorrower As String
+        sqlBorrower = "Select BR.BorrowerID, BR.BorrowerName From Borrower BR 
+                       where BR.BorrowerName='" + txtSearchName.Text + "'"
+
+        'Get Borrower details
+        Dim cmdBorrower As New OleDbCommand(sqlBorrower, conn)
+        Dim readerBorrower As OleDbDataReader
+        readerBorrower = cmdBorrower.ExecuteReader()
+        readerBorrower.Read()
+
+        Try
+            lblBorrowerID.Text = readerBorrower("BorrowerID")
+            lblBorrowerName.Text = readerBorrower("BorrowerName")
+        Catch ex As Exception
+            MessageBox.Show("Data Cannot Be Found: " & ex.Message.ToString(),
+                            "Search Name: LMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Please Click Button Go To Borrower's Information Page To Add New Borrower",
+                            "Help Information: LMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            btnGoBorrowersInfoPg.Visible = True
+        End Try
+    End Sub
+
+    Private Sub btnGoBorrowersInfoPg_Click(sender As Object, e As EventArgs) Handles btnGoBorrowersInfoPg.Click
+        Me.Close()
+        BorrowersInfoPage.Show()
     End Sub
 End Class
