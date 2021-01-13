@@ -76,7 +76,6 @@ Partial Class BorrowersInfoPage
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
         Me.BookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BookTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BookTableAdapter()
         BorrowerNameLabel = New System.Windows.Forms.Label()
         ICNumLabel = New System.Windows.Forms.Label()
         HPNumLabel = New System.Windows.Forms.Label()
@@ -606,10 +605,6 @@ Partial Class BorrowersInfoPage
         Me.BookBindingSource.DataMember = "Book"
         Me.BookBindingSource.DataSource = Me.LmsDataSet
         '
-        'BookTableAdapter
-        '
-        Me.BookTableAdapter.ClearBeforeFill = True
-        '
         'BorrowersInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -662,7 +657,6 @@ Partial Class BorrowersInfoPage
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents BookBindingSource As BindingSource
-    Friend WithEvents BookTableAdapter As lmsDataSetTableAdapters.BookTableAdapter
     Friend WithEvents lblPubYr As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label

@@ -5,7 +5,7 @@ Public Class BorrowersInfoPage
 
     Private Sub Borrowers_Info_Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'LmsDataSet.Book' table. You can move, or remove it, as needed.
-        Me.BookTableAdapter.Fill(Me.LmsDataSet.Book)
+        'Me.BookTableAdapter.Fill(Me.LmsDataSet.Book)
         'TODO: This line of code loads data into the 'LmsDataSet.Borrower' table. You can move, or remove it, as needed.
         'Guna untuk keluarkan data dalam BorrowerBindingSource
         Me.BorrowerTableAdapter.Fill(Me.LmsDataSet.Borrower)

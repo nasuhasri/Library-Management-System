@@ -46,22 +46,17 @@ Partial Class BookIssueInfoPage
         Me.cmbSearch = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.BorrowerNameTextBox = New System.Windows.Forms.TextBox()
+        Me.lblBorrowerName = New System.Windows.Forms.Label()
+        Me.lblBorrowerID = New System.Windows.Forms.Label()
         Me.BorrowerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LmsDataSet = New Library_Management_System.lmsDataSet()
-        Me.BorrowerIDTextBox = New System.Windows.Forms.TextBox()
         Me.DTPDueDate = New System.Windows.Forms.DateTimePicker()
         Me.DTPIssueDate = New System.Windows.Forms.DateTimePicker()
-        Me.BorrowerBorrowBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtSearchName = New System.Windows.Forms.TextBox()
         Me.btnSearchName = New System.Windows.Forms.Button()
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
-        Me.BorrowTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
-        Me.BorrowerTableAdapter1 = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.lblBorrowerID = New System.Windows.Forms.Label()
-        Me.lblBorrowerName = New System.Windows.Forms.Label()
         Me.btnGoBorrowersInfoPg = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,7 +71,6 @@ Partial Class BookIssueInfoPage
         Me.GroupBox3.SuspendLayout()
         CType(Me.BorrowerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BorrowerBorrowBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -214,16 +208,16 @@ Partial Class BookIssueInfoPage
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(789, 21)
+        Me.btnSearch.Location = New System.Drawing.Point(766, 21)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(107, 57)
+        Me.btnSearch.Size = New System.Drawing.Size(130, 57)
         Me.btnSearch.TabIndex = 10
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(519, 39)
+        Me.txtSearch.Location = New System.Drawing.Point(486, 36)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(209, 27)
         Me.txtSearch.TabIndex = 12
@@ -260,29 +254,38 @@ Partial Class BookIssueInfoPage
         Me.GroupBox3.Controls.Add(Me.lblBorrowerName)
         Me.GroupBox3.Controls.Add(Me.lblBorrowerID)
         Me.GroupBox3.Controls.Add(BorrowerNameLabel)
-        Me.GroupBox3.Controls.Add(Me.BorrowerNameTextBox)
         Me.GroupBox3.Controls.Add(BorrowerIDLabel)
-        Me.GroupBox3.Controls.Add(Me.BorrowerIDTextBox)
         Me.GroupBox3.Controls.Add(Me.DTPDueDate)
         Me.GroupBox3.Controls.Add(Me.DTPIssueDate)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(56, 267)
+        Me.GroupBox3.Location = New System.Drawing.Point(56, 378)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(954, 122)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Borrower's Details"
         '
-        'BorrowerNameTextBox
+        'lblBorrowerName
         '
-        Me.BorrowerNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "BorrowerName", True))
-        Me.BorrowerNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorrowerNameTextBox.Location = New System.Drawing.Point(187, 72)
-        Me.BorrowerNameTextBox.Name = "BorrowerNameTextBox"
-        Me.BorrowerNameTextBox.Size = New System.Drawing.Size(223, 27)
-        Me.BorrowerNameTextBox.TabIndex = 17
+        Me.lblBorrowerName.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblBorrowerName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblBorrowerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowerName.Location = New System.Drawing.Point(187, 67)
+        Me.lblBorrowerName.Name = "lblBorrowerName"
+        Me.lblBorrowerName.Size = New System.Drawing.Size(247, 32)
+        Me.lblBorrowerName.TabIndex = 18
+        '
+        'lblBorrowerID
+        '
+        Me.lblBorrowerID.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblBorrowerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblBorrowerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBorrowerID.Location = New System.Drawing.Point(187, 26)
+        Me.lblBorrowerID.Name = "lblBorrowerID"
+        Me.lblBorrowerID.Size = New System.Drawing.Size(247, 32)
+        Me.lblBorrowerID.TabIndex = 16
         '
         'BorrowerBindingSource
         '
@@ -294,21 +297,12 @@ Partial Class BookIssueInfoPage
         Me.LmsDataSet.DataSetName = "lmsDataSet"
         Me.LmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'BorrowerIDTextBox
-        '
-        Me.BorrowerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BorrowerBindingSource, "BorrowerID", True))
-        Me.BorrowerIDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorrowerIDTextBox.Location = New System.Drawing.Point(187, 31)
-        Me.BorrowerIDTextBox.Name = "BorrowerIDTextBox"
-        Me.BorrowerIDTextBox.Size = New System.Drawing.Size(223, 27)
-        Me.BorrowerIDTextBox.TabIndex = 16
-        '
         'DTPDueDate
         '
         Me.DTPDueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTPDueDate.Location = New System.Drawing.Point(636, 74)
         Me.DTPDueDate.Name = "DTPDueDate"
-        Me.DTPDueDate.Size = New System.Drawing.Size(238, 27)
+        Me.DTPDueDate.Size = New System.Drawing.Size(223, 27)
         Me.DTPDueDate.TabIndex = 15
         '
         'DTPIssueDate
@@ -316,13 +310,8 @@ Partial Class BookIssueInfoPage
         Me.DTPIssueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTPIssueDate.Location = New System.Drawing.Point(636, 29)
         Me.DTPIssueDate.Name = "DTPIssueDate"
-        Me.DTPIssueDate.Size = New System.Drawing.Size(238, 27)
+        Me.DTPIssueDate.Size = New System.Drawing.Size(223, 27)
         Me.DTPIssueDate.TabIndex = 14
-        '
-        'BorrowerBorrowBindingSource
-        '
-        Me.BorrowerBorrowBindingSource.DataMember = "BorrowerBorrow"
-        Me.BorrowerBorrowBindingSource.DataSource = Me.BorrowerBindingSource
         '
         'txtSearchName
         '
@@ -346,23 +335,14 @@ Partial Class BookIssueInfoPage
         '
         Me.BorrowerTableAdapter.ClearBeforeFill = True
         '
-        'BorrowTableAdapter
-        '
-        Me.BorrowTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BookTableAdapter = Nothing
         Me.TableAdapterManager.BorrowerTableAdapter = Me.BorrowerTableAdapter
-        Me.TableAdapterManager.BorrowTableAdapter = Me.BorrowTableAdapter
         Me.TableAdapterManager.Late_Return_FinesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Nothing
-        '
-        'BorrowerTableAdapter1
-        '
-        Me.BorrowerTableAdapter1.ClearBeforeFill = True
         '
         'GroupBox4
         '
@@ -370,32 +350,12 @@ Partial Class BookIssueInfoPage
         Me.GroupBox4.Controls.Add(Me.txtSearchName)
         Me.GroupBox4.Controls.Add(Me.btnSearchName)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(56, 410)
+        Me.GroupBox4.Location = New System.Drawing.Point(56, 269)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(954, 90)
         Me.GroupBox4.TabIndex = 13
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Search Name"
-        '
-        'lblBorrowerID
-        '
-        Me.lblBorrowerID.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblBorrowerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblBorrowerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBorrowerID.Location = New System.Drawing.Point(220, 26)
-        Me.lblBorrowerID.Name = "lblBorrowerID"
-        Me.lblBorrowerID.Size = New System.Drawing.Size(247, 32)
-        Me.lblBorrowerID.TabIndex = 16
-        '
-        'lblBorrowerName
-        '
-        Me.lblBorrowerName.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblBorrowerName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblBorrowerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBorrowerName.Location = New System.Drawing.Point(220, 67)
-        Me.lblBorrowerName.Name = "lblBorrowerName"
-        Me.lblBorrowerName.Size = New System.Drawing.Size(247, 32)
-        Me.lblBorrowerName.TabIndex = 18
         '
         'btnGoBorrowersInfoPg
         '
@@ -513,7 +473,6 @@ Partial Class BookIssueInfoPage
         Me.GroupBox3.PerformLayout()
         CType(Me.BorrowerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BorrowerBorrowBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -542,14 +501,9 @@ Partial Class BookIssueInfoPage
     Friend WithEvents LmsDataSet As lmsDataSet
     Friend WithEvents BorrowerBindingSource As BindingSource
     Friend WithEvents BorrowerTableAdapter As lmsDataSetTableAdapters.BorrowerTableAdapter
-    Friend WithEvents BorrowerBorrowBindingSource As BindingSource
-    Friend WithEvents BorrowTableAdapter As lmsDataSetTableAdapters.BorrowTableAdapter
     Friend WithEvents TableAdapterManager As lmsDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents BorrowerNameTextBox As TextBox
-    Friend WithEvents BorrowerIDTextBox As TextBox
     Friend WithEvents txtSearchName As TextBox
     Friend WithEvents btnSearchName As Button
-    Friend WithEvents BorrowerTableAdapter1 As lmsDataSetTableAdapters.BorrowerTableAdapter
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents lblBorrowerName As Label
     Friend WithEvents lblBorrowerID As Label
