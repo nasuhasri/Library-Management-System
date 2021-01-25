@@ -191,16 +191,6 @@ Public Class LateReturnInfoPage
     End Function
 
     Private Sub btnGenRecipt_Click(sender As Object, e As EventArgs) Handles btnGenRecipt.Click
-        'Print Receipt
-        'PrintDialog1.Document = PrintDocument1
-        'PrintDialog1.PrinterSettings = PrintDocument1.PrinterSettings
-        'PrintDialog1.AllowCurrentPage = True
-
-        'If PrintDialog1.ShowDialog = DialogResult.OK Then
-        '    PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
-        '    PrintDocument1.Print()
-        'End If
-
         Dim amtFines, decPayment As Decimal
         amtFines = calcFines()
         decPayment = txtPayment.Text
@@ -214,7 +204,9 @@ Public Class LateReturnInfoPage
 
         Dim sqlPayment, sqlGetBorrowID As String
 
-        sqlGetBorrowID = "Select BO.BorrowID FROM Borrow BO WHERE BO.ISBN='" + lblISBN.Text + "'"
+        sqlGetBorrowID = "Select BO.BorrowID FROM Borrow BO, Borrower BR 
+                          WHERE BO.ISBN='" + lblISBN.Text + "'
+                          And BR.BorrowerName='" + lblName.Text + "'"
         Dim cmdID As New OleDbCommand(sqlGetBorrowID, conn)
         Dim myReader As OleDbDataReader
         myReader = cmdID.ExecuteReader()
@@ -223,6 +215,9 @@ Public Class LateReturnInfoPage
         Dim intBorrowID As Integer
         intBorrowID = myReader("BorrowID")
 
+        Dim statusPymnt As String
+        statusPymnt = "Tak Bayar"
+
         sqlPayment = "INSERT INTO LRFines([LateRetFines], [Payment], [DatePayment], [BorrowID])
                       VALUES (?, ?, ?, ?)"
 
@@ -230,6 +225,7 @@ Public Class LateReturnInfoPage
         cmdPayment.Parameters.Add(New OleDbParameter("LateRetFines", CType(amtFines, Decimal)))
         cmdPayment.Parameters.Add(New OleDbParameter("Payment", CType(decPayment, Decimal)))
         cmdPayment.Parameters.Add(New OleDbParameter("DatePayment", CType(todayDate, Date)))
+        cmdPayment.Parameters.Add(New OleDbParameter("StatusPayment", CType(statusPymnt, String)))
         cmdPayment.Parameters.Add(New OleDbParameter("BorrowID", CType(intBorrowID, Integer)))
 
         Try
@@ -239,6 +235,9 @@ Public Class LateReturnInfoPage
             MsgBox("Error On Inserting Payment Record! " & ex.Message.ToString(), MsgBoxStyle.OkOnly Or
                 MsgBoxStyle.Information, "Insert Payment Record Failed!")
         End Try
+
+        Me.Hide()
+        GenerateReceipt.Show()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -264,5 +263,10 @@ Public Class LateReturnInfoPage
         'Clear fines payment
         lblTotalFines.Text = ""
         txtPayment.Text = ""
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Me.Hide()
+        GenerateReceipt.Show()
     End Sub
 End Class

@@ -109,6 +109,12 @@
     <Compile Include="DeleteBooksPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GenerateReceipt.Designer.vb">
+      <DependentUpon>GenerateReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LateReturnInfoPage.Designer.vb">
       <DependentUpon>LateReturnInfoPage.vb</DependentUpon>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteBooksPage.resx">
       <DependentUpon>DeleteBooksPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReceipt.resx">
+      <DependentUpon>GenerateReceipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LateReturnInfoPage.resx">
       <DependentUpon>LateReturnInfoPage.vb</DependentUpon>

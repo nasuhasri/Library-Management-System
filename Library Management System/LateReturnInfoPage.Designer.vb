@@ -72,6 +72,7 @@ Partial Class LateReturnInfoPage
         Me.BorrowerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -565,6 +566,16 @@ Partial Class LateReturnInfoPage
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Nothing
         '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.Location = New System.Drawing.Point(49, 707)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(199, 75)
+        Me.btnPrint.TabIndex = 17
+        Me.btnPrint.Text = "print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'LateReturnInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -572,6 +583,7 @@ Partial Class LateReturnInfoPage
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1190, 968)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.listBooksNotReturned)
         Me.Controls.Add(Me.btnClear)
@@ -651,4 +663,5 @@ Partial Class LateReturnInfoPage
     Friend WithEvents BorrowerBindingSource As BindingSource
     Friend WithEvents BorrowerTableAdapter As lmsDataSetTableAdapters.BorrowerTableAdapter
     Friend WithEvents TableAdapterManager As lmsDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents btnPrint As Button
 End Class

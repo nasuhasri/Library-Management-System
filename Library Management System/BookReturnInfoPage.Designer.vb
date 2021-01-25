@@ -63,7 +63,6 @@ Partial Class BookReturnInfoPage
         Me.Label13 = New System.Windows.Forms.Label()
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
         Me.TableAdapterManager = New Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager()
-        Me.lblDummy = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BorrowerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -456,16 +455,6 @@ Partial Class BookReturnInfoPage
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Nothing
         '
-        'lblDummy
-        '
-        Me.lblDummy.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblDummy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDummy.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDummy.Location = New System.Drawing.Point(48, 735)
-        Me.lblDummy.Name = "lblDummy"
-        Me.lblDummy.Size = New System.Drawing.Size(268, 36)
-        Me.lblDummy.TabIndex = 27
-        '
         'BookReturnInfoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -473,7 +462,6 @@ Partial Class BookReturnInfoPage
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1199, 912)
-        Me.Controls.Add(Me.lblDummy)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnReturnBook)
@@ -532,5 +520,4 @@ Partial Class BookReturnInfoPage
     Friend WithEvents lblRetFines As Label
     Friend WithEvents lblRetStatus As Label
     Friend WithEvents btnSelectItem As Button
-    Friend WithEvents lblDummy As Label
 End Class

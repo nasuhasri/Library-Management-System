@@ -48,10 +48,10 @@ Partial Class BookIssueInfoPage
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblBorrowerName = New System.Windows.Forms.Label()
         Me.lblBorrowerID = New System.Windows.Forms.Label()
-        Me.BorrowerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LmsDataSet = New Library_Management_System.lmsDataSet()
         Me.DTPDueDate = New System.Windows.Forms.DateTimePicker()
         Me.DTPIssueDate = New System.Windows.Forms.DateTimePicker()
+        Me.BorrowerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LmsDataSet = New Library_Management_System.lmsDataSet()
         Me.txtSearchName = New System.Windows.Forms.TextBox()
         Me.btnSearchName = New System.Windows.Forms.Button()
         Me.BorrowerTableAdapter = New Library_Management_System.lmsDataSetTableAdapters.BorrowerTableAdapter()
@@ -287,16 +287,6 @@ Partial Class BookIssueInfoPage
         Me.lblBorrowerID.Size = New System.Drawing.Size(247, 32)
         Me.lblBorrowerID.TabIndex = 16
         '
-        'BorrowerBindingSource
-        '
-        Me.BorrowerBindingSource.DataMember = "Borrower"
-        Me.BorrowerBindingSource.DataSource = Me.LmsDataSet
-        '
-        'LmsDataSet
-        '
-        Me.LmsDataSet.DataSetName = "lmsDataSet"
-        Me.LmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'DTPDueDate
         '
         Me.DTPDueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -312,6 +302,16 @@ Partial Class BookIssueInfoPage
         Me.DTPIssueDate.Name = "DTPIssueDate"
         Me.DTPIssueDate.Size = New System.Drawing.Size(223, 27)
         Me.DTPIssueDate.TabIndex = 14
+        '
+        'BorrowerBindingSource
+        '
+        Me.BorrowerBindingSource.DataMember = "Borrower"
+        Me.BorrowerBindingSource.DataSource = Me.LmsDataSet
+        '
+        'LmsDataSet
+        '
+        Me.LmsDataSet.DataSetName = "lmsDataSet"
+        Me.LmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtSearchName
         '
@@ -340,6 +340,7 @@ Partial Class BookIssueInfoPage
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BookTableAdapter = Nothing
         Me.TableAdapterManager.BorrowerTableAdapter = Me.BorrowerTableAdapter
+        Me.TableAdapterManager.BorrowTableAdapter = Nothing
         Me.TableAdapterManager.Late_Return_FinesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Library_Management_System.lmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UserTableAdapter = Nothing
